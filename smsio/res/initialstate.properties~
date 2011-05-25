@@ -1,0 +1,25 @@
+ # sms.gsm.serialport - Serial port where the GSM phone is located. Ex: "COM1"
+ # sms.gsm.bitrate - Bits per second
+ # sms.gsm.bit - Databits
+ # sms.gsm.parity - Parity (NONE, EVEN, ODD, MARK, SPACE)
+ # sms.gsm.stopbits - Stopbits (1, 1.5, 2)
+ # sms.gsm.flowcontrol - FlowControl (XONXOFF, RTSCTS, NONE)
+ # sms.gsm.initcommands - Initialization commands, seperated by ; (eg AT+CMGF=0;...)
+ 
+# TODO: configure your port
+ sms.transportclassname=org.marre.sms.transport.gsm.GsmTransport
+ sms.gsm.serialport=COM4
+ sms.gsm.bitrate=115200
+ sms.gsm.bit=8
+ sms.gsm.parity=NONE
+ sms.gsm.stopbits=1
+ sms.gsm.flowcontrol=RTSCTS
+ 
+ sms.sender.number=+33699801022
+ 
+ # Through a HTTP->SMS proxy (see http://www.clickatell.com)
+ # sms.transportclassname=org.marre.sms.transport.clickatell.ClickatellTransport
+ # smsj.clickatell.username=myUsername
+ # smsj.clickatell.password=myPassword
+ # smsj.clickatell.apiid=myApiId
+ 

@@ -1,0 +1,6 @@
+smssevlet.jar
+provides a HTTP servlet front-end to the bundle smssender.jar for sending SMS
+http://www-adele.imag.fr/~donsez/dev/osgi/smsservlet/smsservlet.jar
+fr.imag.adele.bundle.sms, org.ungoverned.gravity.servicebinder
+
+http://www-adele.imag.fr/~donsez/dev/osgi/smsservlet/readme.html

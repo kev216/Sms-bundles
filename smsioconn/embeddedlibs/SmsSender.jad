@@ -1,0 +1,100 @@
+// Decompiled by DJ v3.0.0.63 Copyright 2002 Atanas Neshkov  Date: 27/03/2003 08:35:48
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   SmsSender.java
+
+package org.marre.sms;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+import org.marre.sms.transport.SmsTransport;
+import org.marre.sms.transport.SmsTransportManager;
+
+// Referenced classes of package org.marre.sms:
+//            SmsException, SmsTextMessage, SmsAddress
+
+public class SmsSender
+{
+
+    public static SmsSender getClickatellSender(String theUsername, String thePassword, String theApiId)
+        throws SmsException
+    {
+        Properties props = new Properties();
+        props.setProperty("smsj.clickatell.username", theUsername);
+        props.setProperty("smsj.clickatell.password", thePassword);
+        props.setProperty("smsj.clickatell.apiid", theApiId);
+        return new SmsSender("org.marre.sms.transport.clickatell.ClickatellTransport", props);
+    }
+
+    public static SmsSender getClickatellSender(String thePropsFilename)
+        throws SmsException
+    {
+        Properties props = new Properties();
+        try
+        {
+            props.load(new FileInputStream(thePropsFilename));
+        }
+        catch(IOException ioexception)
+        {
+            throw new SmsException("Couldn't load clickatell properties from file : " + thePropsFilename);
+        }
+        return new SmsSender("org.marre.sms.transport.clickatell.ClickatellTransport", props);
+    }
+
+    public static SmsSender getGsmSender(String theSerialPort)
+        throws SmsException
+    {
+        Properties props = new Properties();
+        props.setProperty("sms.gsm.serialport", theSerialPort);
+        return new SmsSender("org.marre.sms.transport.gsm.GsmTransport", props);
+    }
+
+    public void sendTextSms(String theMsg, String theDest, String theSender)
+        throws SmsException
+    {
+        sendTextSms(theMsg, theDest, theSender, 0);
+    }
+
+    public void sendUnicodeTextSms(String theMsg, String theDest, String theSender)
+        throws SmsException
+    {
+        sendTextSms(theMsg, theDest, theSender, 2);
+    }
+
+    private final void sendTextSms(String theMsg, String theDest, String theSender, int theAlphabet)
+        throws SmsException
+    {
+        SmsTextMessage textMessage = new SmsTextMessage(theMsg, theAlphabet);
+        myTransport.send(textMessage, new SmsAddress(theDest), new SmsAddress(theSender));
+    }
+
+    public void close()
+        throws SmsException
+    {
+        if(myTransport != null)
+        {
+            myTransport.disconnect();
+            myTransport = null;
+        }
+    }
+
+    protected void finalize()
+    {
+        try
+        {
+            close();
+        }
+        catch(SmsException smsexception) { }
+    }
+
+    public SmsSender(String theTransport, Properties theProps)
+        throws SmsException
+    {
+        myTransport = null;
+        myTransport = SmsTransportManager.getTransport(theTransport, theProps);
+        myTransport.connect();
+    }
+
+    SmsTransport myTransport;
+}

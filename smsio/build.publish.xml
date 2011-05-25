@@ -1,0 +1,50 @@
+<!--
+     Author: Didier Donsez
+     Version: 1.0 (01012004)
+-->
+<project name="Publish Bundle" default="publish" basedir=".">
+	<description> This script publishes the bundle described in the project.properties file</description>
+
+	<!-- Set our global properties -->
+	<property file="common.properties"/>
+	<!-- Project specific properties -->
+	<property file="project.properties"/>
+
+	<!-- General properties -->
+	<property name="dist.dir" value="."/>
+	<property name="bundle.dir" value="."/>
+	<property name="doc.dir" value="doc"/>
+	<property name="apidoc.dir" value="${doc.dir}/api"/>
+	
+
+	<!-- Initialize, create directories, etc. -->
+	<target name="init">
+		<ant antfile="build.xml" target="jar"/>
+		<ant antfile="build.xml" target="dist"/>
+	</target>
+	
+	<!-- Publish bundle jarfile, readme.html and sources -->
+	<target name="publish" depends="init">
+		<tstamp>
+			<format property="TODAY" pattern="yyMMdd"/>
+		</tstamp>
+		<tstamp>
+			<format property="touch.time" pattern="MM/dd/yyyy hh:mm aa"/>
+		</tstamp>
+		<delete dir="${publish.dir}/${bundle.name}"/>
+		<mkdir dir="${publish.dir}/${bundle.name}"/>
+		<copy file="${dist.dir}/${bundle.name}-src.jar" 
+			tofile="${publish.dir}/${bundle.name}/${bundle.name}-src.jar"/>
+		<copy file="${bundle.dir}/${bundle.name}.jar" 
+			todir="${publish.dir}/${bundle.name}"/>
+		<copy todir="${publish.dir}/${bundle.name}">
+			<fileset dir="${doc.dir}" >
+			<!--	<exclude name="api/**"/> -->
+			</fileset>
+		</copy>
+		<copy file="LICENSE.txt" todir="${publish.dir}/${bundle.name}">
+		</copy>
+		<echo file="${publish.dir}/${bundle.name}/LASTUPDATE.txt">${touch.time}</echo>
+	</target>
+	
+</project>

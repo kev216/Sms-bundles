@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>SMS Servlet</title>
+</head>
+<body>
+
+<!-- Start of OSCAR Bundle Documentation -->
+<hr width="100%" size="2">
+<h1><i><a name="smsservlet"></a><font color="#0000aa">smsservlet.jar</font></i></h1>
+
+<p>
+<b>Description</b><br>
+This bundle provides a front-end HTTP servlet to <code>smssender.jar</code> bundle that send SMS (Short Message Service) messages<br>
+For more details on how to use this bundle, refer to the /doc/readme.html file embedded in the bundle jarfile and to smssender.jar embedded documentation.<br>
+</p>
+
+<p>
+<b>Contributors</b><br>
+Didier Donsez (<a href="mailto:Didier.Donsez@ieee.org">Didier.Donsez@ieee.org</a>)<br>
+</p>
+
+<p>
+<b>License</b><br>
+LGPL<br>
+</p>
+
+<p>
+<b>Services</b><br>
+None
+</p>
+
+<p>
+<b>Properties</b><br>
+None<br>
+</p>
+
+<p><b>Requirements</b><br>
+servlet.jar<br>
+1 or more services <code>org.osgi.service.http.HttpService</code> provided by <code>http.jar</code><br>
+1 or more services <code>fr.imag.adele.bundle.sms.SMSSender</code> provided by <code>smssender.jar</code><br>
+servicebinder.jar (to automate <code>org.osgi.service.http.HttpService</code> and <code>fr.imag.adele.bundle.sms.SMSSender</code> references)<br>
+</p>
+
+<!-- End of OSCAR Bundle Documentation -->
+
+<hr width="100%" size="2">
+
+<!-- Start of extra information  -->
+
+<p>
+<b>Download</b><br>
+<ul>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/smsservlet/smsservlet.jar'>Bundle binaries</a></li>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/smsservlet/smsservlet-src.jar'>Bundle sources</a></li>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/smsservlet/readme.html'>The latest version of this documentation</a></li>
+</ul>
+</p>
+
+<p>
+<b>Build</b><br>
+<ol>
+<li>configure the build properties in build.xml</li>
+<li>then build with ant</li>
+</ol>
+</p>
+
+<p>
+<b>Usage</b><br>
+fill up one of these forms available from<br>
+<ul>
+<li>http://thegateway/sms/index.htm</li>
+</ul>
+</p>
+
+<p>
+<b>Tested gateways</b><br>
+<ul>
+<li><a href="http://oscar.objectweb.org/">OSCAR</a></li>
+</ul>
+</p>
+
+<p>
+<b>TODO (contributions are welcome)</b><br>
+<ul>
+<li>integrate html response (error,success) in the form</li>
+</ul>
+</p>
+
+<p>
+<b>Links</b><br>
+<ul>
+<li>None</li>
+</ul>
+</p>
+
+</body>
+</html>

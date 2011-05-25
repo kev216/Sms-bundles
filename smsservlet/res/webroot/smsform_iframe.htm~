@@ -1,0 +1,60 @@
+<html>
+<head>
+<style type="text/css">
+	.title {
+		background-color: #cc99ff;
+		border-color: black;
+		border-style: solid;
+		border-width: medium;
+		font-size: 1.5em;
+		margin-left: 20%;
+		margin-right: 20%;
+		padding: .5%;
+		text-align: center
+	}
+</style>
+</head>
+<body>
+
+<table align="center" width="284" height="554" border="0" cellspacing="0" cellpadding="0" background="skin.jpg">
+
+<tr> 
+    <td colspan="3" height="77">
+    </td>
+</tr>
+
+<tr> 
+    <td colspan="3" height="100" valign="botton">
+    	<h1>
+	<center><font face="Verdana,Helvetica,Arial" color="#ffffff">SMS<br>Sender</font></center>
+	</h1>
+    </td>
+</tr>
+
+
+<tr>
+    	<td height="220" width="53" align="center"></td>
+	<td height="220" width="178" align="center">
+	   <IFRAME
+	   	src="innerform.htm"
+		height=181 width=170 
+		marginWidth=0 marginHeight=0 
+		frameBorder=0 
+		scrolling=no 
+		>
+	   </IFRAME>
+	</td>
+    	<td height="220" width="53" align="center"></td>
+</tr>
+
+<tr> 
+        <td colspan="3" align="right" valign="top">
+		<font face=Verdana,Helvetica,Arial size="2">
+		</font>
+	</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+			

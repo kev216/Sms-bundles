@@ -1,0 +1,14 @@
+<bundle>
+<bundle-updatelocation>http://www-adele.imag.fr/~donsez/dev/osgi/jmio/jmio.jar</bundle-updatelocation>
+<bundle-sourceurl>http://www-adele.imag.fr/~donsez/dev/osgi/jmio/jmio-src.jar</bundle-sourceurl>
+<export-package package="javax.microedition.io" specification-version="1.2.0"/>
+<bundle-version>0.1.0</bundle-version>
+<bundle-contactaddress>Didier DONSEZ (Didier.Donsez@ieee.org)</bundle-contactaddress>
+<bundle-copyright>Library GNU Public License</bundle-copyright>
+<bundle-name>Java Micro IO</bundle-name>
+<bundle-description>exports javax.microedition.io interfaces and classes for the IO Connector Service. see specification OSGi release 3, chapter 13</bundle-description>
+<bundle-docurl>http://www-adele.imag.fr/~donsez/dev/osgi/jmio/readme.html</bundle-docurl>
+<bundle-vendor>Didier DONSEZ</bundle-vendor>
+</bundle>
+
+

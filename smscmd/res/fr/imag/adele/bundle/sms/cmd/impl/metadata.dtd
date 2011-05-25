@@ -1,0 +1,44 @@
+<!--
+  DTD for org.ungoverned.gravity.servicebinder descriptor DTD
+
+  Organization : Université Joseph Fourier, IMAG/LSR/ADELE, Grenoble, France
+  Date : October 20, 2002
+
+-->
+
+<!ELEMENT bundle (instance*)>
+
+<!ELEMENT instance (service*,property*,requires*,instantiates?)>
+<!ATTLIST  instance
+class CDATA #REQUIRED
+>
+
+<!ELEMENT service EMPTY>
+<!ATTLIST  service
+interface CDATA #REQUIRED
+>
+
+<!ELEMENT property EMPTY>
+<!ATTLIST  property
+name CDATA #REQUIRED
+type CDATA #REQUIRED
+value CDATA #REQUIRED
+>
+
+<!ELEMENT requires EMPTY>
+<!ATTLIST  requires
+service CDATA #REQUIRED
+filter CDATA #REQUIRED
+cardinality (0..1|0..n|1..1|1..n) #REQUIRED
+policy (static|dynamic) #REQUIRED
+bind-method CDATA #REQUIRED
+unbind-method CDATA #REQUIRED
+>
+
+<!ELEMENT instantiates  (service*,property*,requires*)>
+<!ATTLIST  instantiates
+class CDATA #REQUIRED
+>
+
+
+

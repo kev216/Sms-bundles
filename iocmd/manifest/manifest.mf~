@@ -1,0 +1,15 @@
+Bundle-Name: IO Command
+Bundle-Description: provides a command (for OSCAR shell) to write message in a open connection
+Bundle-Vendor: Didier DONSEZ
+Bundle-Version: 0.1.0
+Bundle-Copyright: Library GNU Public License
+Bundle-ContactAddress: Didier Donsez (didier.donsez@ieee.org)
+Bundle-UpdateLocation: http://www-adele.imag.fr/~donsez/dev/osgi/iocmd/iocmd.jar
+Bundle-SourceURL: http://www-adele.imag.fr/~donsez/dev/osgi/iocmd/iocmd-src.jar
+Bundle-DocURL: http://www-adele.imag.fr/~donsez/dev/osgi/iocmd/readme.html
+Bundle-Activator: fr.imag.adele.bundle.iocmd.impl.Activator
+Import-Package: org.ungoverned.osgi.service.shell,
+ org.ungoverned.gravity.servicebinder;specification-version=1.1,
+ org.osgi.service.io;specification-version=1.0,
+ javax.microedition.io
+Metadata-Location: /sb-metadata.xml

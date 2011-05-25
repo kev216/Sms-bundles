@@ -1,0 +1,17 @@
+<bundle>
+<bundle-updatelocation>http://www-adele.imag.fr/~donsez/dev/osgi/iocmd/iocmd.jar</bundle-updatelocation>
+<import-package package="org.ungoverned.osgi.service.shell" specification-version="0.0.0"/>
+<import-package package="org.ungoverned.gravity.servicebinder" specification-version="1.1.0"/>
+<import-package package="org.osgi.service.io" specification-version="1.0.0"/>
+<import-package package="javax.microedition.io" specification-version="0.0.0"/>
+<bundle-sourceurl>http://www-adele.imag.fr/~donsez/dev/osgi/iocmd/iocmd-src.jar</bundle-sourceurl>
+<bundle-version>0.1.0</bundle-version>
+<bundle-contactaddress>Didier Donsez (didier.donsez@ieee.org)</bundle-contactaddress>
+<bundle-copyright>Library GNU Public License</bundle-copyright>
+<bundle-name>IO Command</bundle-name>
+<bundle-description>provides a command (for OSCAR shell) to write message in a open connection</bundle-description>
+<bundle-docurl>http://www-adele.imag.fr/~donsez/dev/osgi/iocmd/readme.html</bundle-docurl>
+<bundle-vendor>Didier DONSEZ</bundle-vendor>
+</bundle>
+
+

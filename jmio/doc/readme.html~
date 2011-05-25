@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Java MicroEdition IO</title>
+</head>
+<body>
+
+<!-- Start of OSCAR Bundle Documentation -->
+<hr width="100%" size="2">
+<h1><i><a name="jmio"></a><font color="#0000aa">jmio.jar</font></i></h1>
+
+<p>
+<b>Description</b><br>
+This bundle exports javax.microedition.io interfaces and classes for the IO Connector Service. see specification OSGi release 3, chapter 13<br>
+For more details on how to use this bundle, refer to the /doc/readme.html file embedded in the bundle jarfile.<br>
+</p>
+
+<p>
+<b>Contributors</b><br>
+Didier Donsez (<a href="mailto:Didier.Donsez@ieee.org">Didier.Donsez@ieee.org</a>)<br>
+</p>
+
+<p>
+<b>License</b><br>
+LGPL<br>
+</p>
+
+<p>
+<b>Services</b><br>
+None
+</p>
+
+<p>
+<b>Properties</b><br>
+None
+</p>
+
+<p><b>Requirements</b><br>
+None
+</p>
+
+<!-- End of OSCAR Bundle Documentation -->
+
+<hr width="100%" size="2">
+
+<!-- Start of extra information  -->
+
+<p>
+<b>Download</b><br>
+<ul>
+<li><a href='http://www-adele.imag.fr/~donsez/dev/osgi/jmio/jmio.jar'>Bundle binaries</a></li>
+<li><a href='http://www-adele.imag.fr/~donsez/dev/osgi/jmio/jmio-src.jar'>Bundle sources</a></li>
+<li><a href='http://www-adele.imag.fr/~donsez/dev/osgi/jmio/readme.html'>The latest version of this documentation</a></li>
+</ul>
+</p>
+
+<p>
+<b>Build</b><br>
+<ol>
+<li>configure the build properties in build.xml</li>
+<li>then build with ant</li>
+</ol>
+</p>
+
+<p>
+<b>Tested gateways</b><br>
+<ul>
+<li><a href="http://oscar.objectweb.org/">OSCAR</a></li>
+</ul>
+</p>
+
+
+<p>
+<b>TODO (contributions are welcome)</b><br>
+<ul>
+</ul>
+</p>
+
+</body>
+</html>

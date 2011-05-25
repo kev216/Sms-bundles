@@ -1,0 +1,17 @@
+Bundle-Name: SMS IO Connector
+Bundle-Description: provides a ConnectionFactory to send SMS messages on connected GSM phone (wrapper for the SMS library http://smsj.sourceforge.net)
+Bundle-Vendor: Didier DONSEZ
+Bundle-Version: 0.1.0
+Bundle-UpdateLocation: http://www-adele.imag.fr/~donsez/dev/osgi/smsio/smsio.jar
+Bundle-SourceURL: http://www-adele.imag.fr/~donsez/dev/osgi/smsio/smsio-src.jar
+Bundle-DocURL: http://www-adele.imag.fr/~donsez/dev/osgi/smsio/readme.html
+X-Bundle-EmbeddedDocURL: /doc/readme.html
+Bundle-Copyright: Library GNU Public License
+Bundle-ContactAddress: Didier DONSEZ (Didier.Donsez@ieee.org)
+Bundle-ClassPath: .,smsj.jar
+Bundle-Activator: fr.imag.adele.bundle.smsio.impl.SmsConnectionFactory
+Import-Package: org.osgi.service.io; specification-version=1.0,
+ javax.microedition.io,
+ javax.comm
+Config-Location: /initialstate.properties
+Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0, OSGi/Minimum-1.0

@@ -1,0 +1,12 @@
+Bundle-Name: SMS Servlet
+Bundle-Description: provides a servlet to send SMS.
+Bundle-Vendor: Didier DONSEZ
+Bundle-Version: 0.1.0
+Bundle-DocURL: /docs/readme.html
+Bundle-Copyright: Library GNU Public License
+Bundle-ContactAddress: Didier DONSEZ <Didier.Donsez@ieee.org>
+Bundle-Activator: fr.imag.adele.bundle.sms.servlet.impl.Activator
+Import-Package: fr.imag.adele.bundle.sms, javax.servlet, javax.servlet.http, org.osgi.service.http; specification-version=1.0, org.ungoverned.gravity.servicebinder;specification-version=1.0
+Metadata-Location: /fr/imag/adele/bundle/sms/servlet/impl/metadata.xml
+Config-Location: /fr/imag/adele/bundle/sms/servlet/impl/config.properties
+

@@ -1,0 +1,11 @@
+Bundle-Name: Java Micro IO
+Bundle-Description: exports javax.microedition.io interfaces and classes for the IO Connector Service. see specification OSGi release 3, chapter 13
+Bundle-Vendor: Didier DONSEZ
+Bundle-ContactAddress: Didier DONSEZ (Didier.Donsez@ieee.org)
+Bundle-Version: 0.1.0
+Bundle-UpdateLocation: http://www-adele.imag.fr/~donsez/dev/osgi/jmio/jmio.jar
+Bundle-SourceURL: http://www-adele.imag.fr/~donsez/dev/osgi/jmio/jmio-src.jar
+Bundle-DocURL: http://www-adele.imag.fr/~donsez/dev/osgi/jmio/readme.html
+X-Bundle-EmbeddedDocURL: /doc/readme.html
+Bundle-Copyright: Library GNU Public License
+Export-Package: javax.microedition.io;specification-version=1.2

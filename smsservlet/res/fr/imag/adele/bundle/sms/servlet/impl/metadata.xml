@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<!DOCTYPE bundle SYSTEM "metadata.dtd">
+-->
+<bundle>
+
+  <instance class="fr.imag.adele.bundle.sms.servlet.impl.HttpBundleImpl">
+  <!-- provides no service -->
+    <requires
+        service="org.osgi.service.http.HttpService"
+	filter=""
+        cardinality="1..n"
+        policy="dynamic"
+        bind-method="bindHttpService"
+        unbind-method="unbindHttpService"
+    />
+    <requires
+        service="fr.imag.adele.bundle.sms.SMSSender"
+	filter=""
+        cardinality="1..n"
+        policy="dynamic"
+        bind-method="bindService"
+        unbind-method="unbindService"
+	/>
+  </instance>
+</bundle>

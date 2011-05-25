@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>IO Connector Service</title>
+</head>
+<body>
+
+<!-- Start of OSCAR Bundle Documentation -->
+<hr width="100%" size="2">
+<h1><i><a name="io"></a><font color="#0000aa">IO Connector Service</font></i></h1>
+
+<p>
+<b>Description</b><br>
+This bundle provides provides a simple implementation of the  OSGi IO Connector service (R3 Chapter 13,R4 Chapter 109)<br>
+For more details on how to use this bundle, refer to the /doc/readme.html file embedded in the bundle jarfile.<br>
+</p>
+
+<p>
+<b>Contributors</b><br>
+Didier Donsez (<a href="mailto:Didier.Donsez@ieee.org">Didier.Donsez@ieee.org</a>)<br>
+</p>
+
+<p>
+<b>License</b><br>
+LGPL<br>
+</p>
+
+<p>
+<b>Services</b><br>
+<code>org.osgi.service.io.ConnectionService</code>
+</p>
+
+<p>
+<b>Properties</b><br>
+None<br>
+</p>
+
+<p><b>Requirements</b><br>
+org.osgi.service.io; specification-version=1.0<br>
+javax.microedition.io
+</p>
+
+<!-- End of OSCAR Bundle Documentation -->
+
+<hr width="100%" size="2">
+
+<!-- Start of extra information  -->
+
+<p>
+<b>Download</b><br>
+<ul>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/io/io.jar'>Bundle binaries</a></li>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/io/io-src.jar'>Bundle sources</a></li>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/io/readme.html'>The latest version of this documentation</a></li>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/io/obr.txt'>The OBR descriptor (text format)</a></li>
+</ul>
+</p>
+
+<p id="build">
+<b>Build</b><br>
+<ol>
+<li>configure the common.properties if necessary</li>
+<li>configure the project.properties if necessary</li>
+<li>build with ant</li>
+</ol>
+</p>
+
+<p id="typicalusage">
+<b>Typical Usages</b><br>
+see chapter 13 in OSGi release 3
+<br>Schemes such as mail, sms, mms, http, comm ...
+</p>
+
+<p id="rundemo">
+<b>Run the demo</b><br>
+To run the demo of this bundle, enter the following  <a href="http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/script/io.txt">http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/script/io.txt</a> in the OSCAR shell.
+</p>
+
+<p id="gateways">
+<b>Tested gateways</b><br>
+<ul>
+<li><a href="http//oscar.objectweb.org/">Oscar</a> (done)</li>
+<li>Felix (done)</li>
+<li><a href="http://www.knopflerfish.org">Knopflerfish OSGi</a> (to do)</li>
+<li><a href="http://wwws.sun.com/software/embeddedserver/index.html">SUN JES</a> (to do)</li>
+<li><a href="http://www-306.ibm.com/software/wireless/wsdd/">IBM SMF</a> (to do)</li>
+</ul>
+</p>
+
+<p>
+<b>TODO (contributions are welcome)</b><br>
+<ul>
+<li>optimize it with a ServiceTracker object</li>
+<li>R4 109.6 Security</li>
+<li>109.4.1 Orphaned Connection Objects</li>
+</ul>
+</p>
+
+</body>
+</html>

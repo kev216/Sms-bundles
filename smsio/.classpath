@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="externallibs/osgi.jar"/>
+	<classpathentry kind="lib" path="externallibs/jmio.jar"/>
+	<classpathentry kind="lib" path="embeddedlibs/smsj.jar"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>

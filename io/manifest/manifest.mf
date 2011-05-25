@@ -1,0 +1,15 @@
+Bundle-SymbolicName: fr.imag.adele.bundle.IOConnectorService
+Bundle-Name: IO Connector Service
+Bundle-Description: provides a implementation of ConnectionService. see specification OSGi (R3 chapter 13, R4 chapter 109) 
+Bundle-Version: 0.9.2
+Bundle-Vendor: Didier DONSEZ
+Bundle-Copyright: Library GNU Public License
+Bundle-ContactAddress: Didier DONSEZ (Didier.Donsez@ieee.org)
+Bundle-UpdateLocation: http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/io/io.jar
+Bundle-DocUrl: http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/io/readme.html
+Bundle-SourceUrl: http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/io/io-src.jar
+Bundle-Activator: fr.imag.adele.bundle.io.SimpleConnectorServiceImpl
+Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0, OSGi/Minimum-1.0
+Import-Package: org.osgi.service.io; specification-version=1.0, javax.microedition.io
+Import-Service: org.osgi.service.io.ConnectionFactory
+Export-Service: org.osgi.service.io.ConnectorService

@@ -1,0 +1,163 @@
+<project name="__BUNDLE__FULLNAME__" default="bundle" basedir=".">
+<description>
+This buildfile is used to build a bundle that
+__BUNDLE_DESCRIPTION__
+</description>
+
+	<!-- Set our global properties -->
+	<property file="./common.properties"/>
+    
+	<!-- Project specific properties -->
+	<property file="./project.properties"/>
+	<property name="packagenames.to.javadoc" 	value="${packagename}.*"/>
+  
+	<!-- General properties -->
+	<property name="src.dir" value="src"/>
+	<property name="manifest.dir" value="manifest"/>
+	<property name="manifest-filename" value="${manifest.dir}/manifest.mf"/>
+	<property name="res.dir" value="res"/>
+	<property name="dist.dir" value="."/>
+	<property name="build.dir" value="build"/>
+	<property name="embeddedlibs.dir" value="embeddedlibs"/>
+	<property name="externallibs.dir" value="externallibs"/>
+	<property name="native.dir" value="native"/>
+	<property name="doc.dir" value="doc"/>
+	<property name="apidoc.dir" value="${doc.dir}/api"/>
+	<property name="debug.flag" value="on"/>
+	<property name="verbose.flag" value="no"/>
+    
+	<path id="project.path">
+                <pathelement location="${build.dir}"/>
+		
+		<fileset dir="${embeddedlibs.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+
+		<fileset dir="${externalibs.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+    
+	    <!-- Initialize, create directories, etc. -->
+	    <target name="init">
+		<mkdir dir="${src.dir}"/>
+		<mkdir dir="${embeddedlibs.dir}"/>
+		<mkdir dir="${externallibs.dir}"/>
+		<mkdir dir="${manifest.dir}"/>
+		<mkdir dir="${native.dir}"/>
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${doc.dir}"/>
+		<mkdir dir="${apidoc.dir}"/>
+	    </target>
+		
+	    
+	    <!-- Compile  -->
+	    <target name="compile" depends="init">
+		<javac 	srcdir="${src.dir}"
+			destdir="${build.dir}"
+			debug="${debug.flag}"
+			verbose="${verbose.flag}"
+			>
+			<classpath refid="project.path"/>
+	       </javac>
+	    </target>
+	
+	    <!-- create JavaDoc -->
+	    <target name="javadoc" depends="compile">
+			<javadoc
+				packagenames="${packagenames.to.javadoc}"
+				sourcepath="${src.dir}"
+				classpathref="project.path"
+				destdir="${apidoc.dir}"
+				author="true"
+				version="true"
+				use="true"
+				windowtitle="${bundle.fullname} API">
+				<link href="http://java.sun.com/j2se/1.4/docs/api/"/>
+				<link href="http://ivadmin.vwh.net/devzone/members/library/javadoc/"/>
+			</javadoc>
+	    </target>
+    
+	<!-- create the bundle jarfile. -->
+	<target name="bundle" depends="compile">
+		<!-- copy since problem with jar update -->
+	
+		<!-- add Ressources -->
+		<copy todir="${build.dir}" preservelastmodified="yes">
+			<fileset dir="${res.dir}" />
+		</copy>
+	
+		<!-- add Embedded JarFiles -->
+		<copy todir="${build.dir}" preservelastmodified="yes">
+			<fileset dir="${embeddedlibs.dir}" />
+		</copy>
+
+		<!-- add Documents and APIs -->
+		<copy todir="${build.dir}/doc" preservelastmodified="yes">
+			<fileset dir="${doc.dir}" />
+		</copy>
+		
+		<jar
+		    destfile="${dist.dir}/${bundle.name}.jar"
+		    manifest="${manifest-filename}"
+		    basedir="${build.dir}"
+		>
+			<include name="**/*.*"/>
+		</jar>
+	<!--
+		<jar update="yes"
+		    destfile="${bundle.dir}/${bundle.name}.jar"
+		    manifest="${manifest-filename}"
+		    basedir="${build.dir}"
+		>
+		       <include name="**/*.txt"/>
+		</jar>
+	-->
+	</target>
+
+    	<!-- clean generated files and backup files -->
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+		<delete dir="${apidoc.dir}"/>
+		<delete>
+			<fileset dir=".">
+				<include name="**/*~"/>
+				<include name="**/#*#"/>
+			</fileset>
+		</delete>
+		<delete file="${dist.dir}/${bundle.name}.jar"/>
+		<delete file="${dist.dir}/${bundle.name}-src.jar"/>
+	</target>
+    
+    	<!-- Create the distribution JAR file. -->
+	<target name="dist">
+		<tstamp>
+			<format property="TODAY" pattern="yyMMdd"/>
+		</tstamp>
+		
+		<jar destfile="${dist.dir}/${bundle.name}-src-${TODAY}.jar"
+			basedir="."
+			excludes="**/${bundle.name}-src*.zip,**/${bundle.name}-src*.jar,**/*.class,${build.dir}/**"
+		/>
+		
+		<copy file="${dist.dir}/${bundle.name}-src-${TODAY}.jar"
+			tofile="${dist.dir}/${bundle.name}-src.jar"/>		
+	</target>
+	
+    	<!-- Publish bundle jarfile, readme.html and sources -->
+	<target name="publish" depends="bundle,dist">
+		<tstamp>
+			<format property="TODAY" pattern="yyMMdd"/>
+		</tstamp>
+		<mkdir dir="${publish.dir}/${bundle.name}"/>
+		<copy todir="${publish.dir}/${bundle.name}"
+			file="${dist.dir}/${bundle.name}.jar"/>
+		<copy todir="${publish.dir}/${bundle.name}"
+			file="${dist.dir}/${bundle.name}-src.jar"/>
+		<copy todir="${publish.dir}/${bundle.name}">
+			<fileset dir="${doc.dir}" >
+				<exclude name="api/**"/>
+			</fileset>
+		</copy>
+	</target>
+</project>

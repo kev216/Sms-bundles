@@ -1,0 +1,6 @@
+smssender.jar
+provides a Service to send SMS messages on connected GSM phone (wrapper for the SMS library http://smsj.sourceforge.net)
+http://www-adele.imag.fr/~donsez/dev/osgi/smssender/smssender.jar
+
+fr.imag.adele.bundle.sms
+http://www-adele.imag.fr/~donsez/dev/osgi/smssender/readme.html

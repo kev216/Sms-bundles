@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<!DOCTYPE bundle SYSTEM "metadata.dtd">
+-->
+<bundle>
+  <instance class="fr.imag.adele.bundle.sms.cmd.impl.ShellCmdBundleImpl">
+    <service interface="org.ungoverned.osgi.service.shell.Command"/>
+    <!-- no property -->
+    <requires
+        service="fr.imag.adele.bundle.sms.SMSSender"
+	filter=""
+        cardinality="1..n"
+        policy="dynamic"
+        bind-method="bindService"
+        unbind-method="unbindService"
+	/>
+  </instance>
+</bundle>

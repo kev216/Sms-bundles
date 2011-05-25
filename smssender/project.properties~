@@ -1,0 +1,5 @@
+project.shortname=WireAdminBinder Bundle
+bundle.name=wireadminbinder
+bundle.description=automates the creation and deletion of wires between producers and consumers
+package.name=fr.imag.adele.bundle.wireadminbinder
+

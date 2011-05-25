@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="smsform.xsl"?>
+<!--
+<!DOCTYPE sms SYSTEM "http://www.gsm.org/dtds/sms.dtd">
+-->
+<sms>
+<sender>+3361234567</sender>
+<receiver>+33698765432</receiver>
+<message>My position is [lat 45°11'37"N, lon 05°46'15"E, alt 223m]. My Temperature is [300.5 K]</message>
+</sms>

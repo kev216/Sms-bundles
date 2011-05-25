@@ -1,0 +1,11 @@
+Bundle-Name: SMS Sender
+Bundle-Description: provides a Service to send SMS messages on connected GSM phone (wrapper for the SMS library http://smsj.sourceforge.net)
+Bundle-Version: 0.1.0
+Bundle-Copyright: Library GNU Public License
+Bundle-ContactAddress: Didier DONSEZ (didier.donsez@ieee.org)
+Bundle-Activator: fr.imag.adele.bundle.sms.impl.Activator
+Bundle-ClassPath: .,smsj.jar
+Export-Service: fr.imag.adele.bundle.sms.SMSSender
+Export-Package: fr.imag.adele.bundle.sms
+Import-Package: javax.comm
+Config-Location: /config.properties

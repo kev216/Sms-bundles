@@ -1,0 +1,1335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)http://www.activexperts.com/activcomport/hayesat/ -->
+<HTML><HEAD><TITLE>ActiveComport - Send Hayes AT commands to a modem</TITLE>
+<META content="RS-232, RS-485, com port, usb port, com, usb, activex, at" 
+name=keywords>
+<META 
+content="ActiveComport is a serial port toolkit to control your modem, usb device, weight indicator or any other serial device" 
+name=description>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="ActiveComport - Send Hayes AT commands to a modem_fichiers/styles.css" 
+type=text/css rel=stylesheet>
+<META content="MSHTML 6.00.2737.800" name=GENERATOR></HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="100%" height="100%">
+      <TABLE class=toplogos cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD align=left width=800 height=40><A 
+            href="http://www.activexperts.com/"><IMG height=50 
+            src="ActiveComport - Send Hayes AT commands to a modem_fichiers/header.gif" 
+            width=775 align=top border=0></A> </TD></TR>
+        <TR></TR></TBODY></TABLE>
+      <TABLE class=topmenus cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD class=topmiddlemenu width=160 
+            height=20>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </TD>
+          <TD class=topmiddlemenu>
+            <SCRIPT language=JavaScript1.2 
+            src="ActiveComport - Send Hayes AT commands to a modem_fichiers/stm31.js" 
+            type=text/javascript></SCRIPT>
+
+            <SCRIPT language=JavaScript1.2 type=text/javascript>
+<!--
+stm_bm(["uueoehr",400,"","/common/blank.gif",0,"","",0,0,0,0,0,1,0,0,"","",0],this);
+stm_bp("p0",[0,4,0,0,4,0,0,0,100,"",-2,"",-2,90,0,0,"#000000","#000000","",3,0,0,"#000000"]);
+stm_ai("p0i0",[0,"   Home  ","","",-1,-1,0,"http://www.activexperts.com","_self","","","","",0,0,0,"","",0,0,0,0,1,"#000000",0,"#cc0000",0,"","",3,3,0,0,"#fffff7","#000000","#ffffff","#ffffff","8pt Verdana","8pt Verdana",0,0]);
+stm_aix("p0i1","p0i0",[0,"|","","",-1,-1,0,"","_self","","","","",0,0,0,"","",0,0,0,0,1,"#000000",0,"#000000"]);
+stm_aix("p0i2","p0i0",[0,"  Products  ","","",-1,-1,0,""]);
+stm_bp("p1",[1,4,0,0,1,3,1,0,100,"progid:DXImageTransform.Microsoft.Fade(overlap=.5,enabled=0,Duration=0.43)",-2,"",-2,67,0,0,"#999999","#000000","",3,0,0,"#aca899"]);
+stm_aix("p1i0","p0i0",[0,"Product overview","","",-1,-1,0,"http://www.activexperts.com/products","_self","","","","",1,0,0,"","",0,0,0,0,1,"#ffffff",0,"#333333",0,"","",3,3,0,0,"#fffff7","#000000","#000000"]);
+stm_ai("p1i1",[6,1,"#ffffff","",0,0,0]);
+stm_aix("p1i2","p1i0",[0,"ActiveXperts Network Monitor","","",-1,-1,0,"http://www.activexperts.com/activmonitor","_self","","","","",0]);
+stm_aix("p1i3","p1i2",[0,"ActiveXperts SMS and Pager Toolkit","","",-1,-1,0,"http://www.activexperts.com/activsms"]);
+stm_aix("p1i4","p1i2",[0,"ActiveComport Serial Port Toolkit","","",-1,-1,0,"http://www.activexperts.com/activcomport"]);
+stm_aix("p1i5","p1i2",[0,"ActiveSocket Network Toolkit","","",-1,-1,0,"http://www.activexperts.com/activsocket"]);
+stm_aix("p1i6","p1i2",[0,"ActiveEmail SMTP Toolkit","","",-1,-1,0,"http://www.activexperts.com/activemail"]);
+stm_aix("p1i7","p1i2",[0,"ActiveWebserver","","",-1,-1,0,"http://www.activexperts.com/activwebserver"]);
+stm_aix("p1i8","p1i2",[0,"ActiveXperts SMS Messaging Server","","",-1,-1,0,"http://www.activexperts.com/asmssrvr"]);
+stm_ep();
+stm_aix("p0i3","p0i1",[]);
+stm_aix("p0i4","p0i0",[0,"  Downloads  ","","",-1,-1,0,"http://www.activexperts.com/download"]);
+stm_bpx("p2","p1",[1,4,0,0,1,3,1,0,100,"progid:DXImageTransform.Microsoft.Fade(overlap=.5,enabled=0,Duration=0.43)",-2,"",-2,67,0,0,"#cccccc"]);
+stm_aix("p2i0","p1i0",[0,"Choose a product","","",-1,-1,0,"http://www.activexperts.com/download"]);
+stm_ep();
+stm_aix("p0i5","p0i1",[]);
+stm_aix("p0i6","p0i2",[0,"  Sales  "]);
+stm_bpx("p3","p2",[]);
+stm_aix("p3i0","p1i0",[0,"Pricing","","",-1,-1,0,"http://www.activexperts.com/sales"]);
+stm_aix("p3i1","p1i2",[0,"Ordering","","",-1,-1,0,"http://www.activexperts.com/sales#ORDERINGINFO"]);
+stm_aix("p3i2","p1i2",[0,"Find a Reseller","","",-1,-1,0,"http://www.activexperts.com/sales/resellers"]);
+stm_aix("p3i3","p1i2",[0,"Reseller Area","","",-1,-1,0,"http://www.activexperts.com/resellers"]);
+stm_aix("p3i4","p1i2",[0,"Contact Sales","","",-1,-1,0,"mailto:sales@activexperts.com"]);
+stm_ep();
+stm_aix("p0i7","p0i1",[]);
+stm_aix("p0i8","p0i2",[0,"  Support  "]);
+stm_bpx("p4","p2",[]);
+stm_aix("p4i0","p1i0",[0,"Technical Support","","",-1,-1,0,"http://www.activexperts.com/support"]);
+stm_aix("p4i1","p1i2",[0,"Contact Support","","",-1,-1,0,"mailto:support@activexperts.com"]);
+stm_ep();
+stm_aix("p0i9","p0i1",[]);
+stm_aix("p0i10","p0i2",[0,"  About ActiveXperts  "]);
+stm_bpx("p5","p2",[]);
+stm_aix("p5i0","p1i0",[0,"About the Company","","",-1,-1,0,"http://www.activexperts.com/about"]);
+stm_aix("p5i1","p1i2",[0,"Contact Us","","",-1,-1,0,"http://www.activexperts.com/contact"]);
+stm_ep();
+stm_ep();
+stm_em();
+//-->
+</SCRIPT>
+          </TD></TR></TBODY></TABLE>
+      <TABLE class=desktop height="100%" cellSpacing=0 cellPadding=4 
+      width="100%">
+        <TBODY>
+        <TR>
+          <TD vAlign=top>
+            <TABLE height="99%" cellSpacing=0 cellPadding=6 width="100%" 
+            align=left>
+              <TBODY>
+              <TR>
+                <TD class=leftpane vAlign=top width=144 rowSpan=2><FONT 
+                  size=1><BR></FONT>
+                  <TABLE class=leftpaneouter cellSpacing=0 cellPadding=1 
+                  width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=8 
+                        src="ActiveComport - Send Hayes AT commands to a modem_fichiers/bricks.jpg" 
+                        width=144><BR>
+                        <TABLE class=leftpaneinner cellSpacing=2 cellPadding=2 
+                        width="100%">
+                          <TBODY>
+                          <TR>
+                            <TD class=leftbodytext><FONT 
+                              class=link><B>ActiveComport</B></FONT><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport">&nbsp;Product 
+                              Overview</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport#SYSTEMREQUIREMENTS">&nbsp;System 
+                              Requirements</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport#INSTALLATION">&nbsp;Installation</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/samples">&nbsp;Samples</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/Support/activcomport">&nbsp;Support</A><BR>
+                              <HR SIZE=1>
+
+                              <TABLE class=leftbodytext cellSpacing=0 
+                              cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD width=120><A 
+                                href="http://www.activexperts.com/files/activcomport/manual.htm" 
+                                target=_blank>&nbsp;Manual (.htm)</A> </TD>
+                                <TD><A 
+                                href="http://www.activexperts.com/files/activcomport/manual.htm" 
+                                target=_blank><IMG 
+                                src="ActiveComport - Send Hayes AT commands to a modem_fichiers/icon_html.jpg" 
+                                border=0></A> </TD></TR></TBODY></TABLE>
+                              <HR SIZE=1>
+
+                              <TABLE class=leftbodytext cellSpacing=0 
+                              cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD width=120><A 
+                                href="http://www.activexperts.com/download?PARAM1=ACTIVECOMPORT">&nbsp;Download 
+                                (.exe)</A> </TD>
+                                <TD><A 
+                                href="http://www.activexperts.com/download?PARAM1=ACTIVECOMPORT"><IMG 
+                                src="ActiveComport - Send Hayes AT commands to a modem_fichiers/download_small.gif" 
+                                border=0></A> 
+                          </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+                  <TABLE class=leftpaneouter cellSpacing=0 cellPadding=1 
+                  width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=8 
+                        src="ActiveComport - Send Hayes AT commands to a modem_fichiers/bricks.jpg" 
+                        width=144><BR>
+                        <TABLE class=leftpaneinner cellSpacing=2 cellPadding=2 
+                        width="100%">
+                          <TBODY>
+                          <TR>
+                            <TD class=leftbodytext><FONT 
+                              class=link><B>Purchase</B></FONT><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/sales">&nbsp;Order 
+                              here</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/sales#LICENSINGINFO">&nbsp;Licensing 
+                              and 
+                    pricing</A><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+                  <TABLE class=leftpaneouter cellSpacing=0 cellPadding=1 
+                  width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=8 
+                        src="ActiveComport - Send Hayes AT commands to a modem_fichiers/bricks.jpg" 
+                        width=144><BR>
+                        <TABLE class=leftpaneinner cellSpacing=2 cellPadding=2 
+                        width="100%">
+                          <TBODY>
+                          <TR>
+                            <TD class=leftbodytext><FONT class=link><B>Related 
+                              documents</B></FONT><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/cases/sorceress">&nbsp;<B>Case 
+                              study</B>: Using<BR>&nbsp;ActiveComport to 
+                              send<BR>&nbsp;SMS's (by 
+                              Sorceress<BR>&nbsp;Entertainment)</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/hayesat">&nbsp;Hayes 
+                              AT commands</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/progrmodem">&nbsp;Basics 
+                              about<BR>modem programming</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/progrsms">&nbsp;Basics 
+                              about SMS<BR>&nbsp;through cellular phone</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/nokia_gsm_at">&nbsp;Nokia 
+                              GSM AT<BR>&nbsp;command set</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/techsms">&nbsp;SMS 
+                              technical<BR>&nbsp;documentation</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activcomport/progruart">&nbsp;Basics 
+                              about<BR>&nbsp;programming a 
+                          UART</A><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+                  <TABLE class=leftpaneouter cellSpacing=0 cellPadding=1 
+                  width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=8 
+                        src="ActiveComport - Send Hayes AT commands to a modem_fichiers/bricks.jpg" 
+                        width=144><BR>
+                        <TABLE class=leftpaneinner cellSpacing=2 cellPadding=2 
+                        width="100%">
+                          <TBODY>
+                          <TR>
+                            <TD class=leftbodytext><FONT class=link><B>Other 
+                              Products</B></FONT><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activmonitor">&nbsp;Network 
+                              Monitor</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activsms">&nbsp;SMS 
+                              and Pager Toolkit</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activsocket">&nbsp;ActiveSocket 
+                              Toolkit</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activemail">&nbsp;ActiveEmail 
+                              Toolkit</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/activwebserver">&nbsp;ActiveWebserver</A><BR>
+                              <HR SIZE=1>
+                              <A 
+                              href="http://www.activexperts.com/download">&nbsp;Downloads&nbsp;&nbsp;<IMG 
+                              alt="Download trial versions" 
+                              src="ActiveComport - Send Hayes AT commands to a modem_fichiers/download_small.gif" 
+                              border=0></A><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR></TD>
+                <TD class=middlebodytext vAlign=top height="100%">
+                  <TABLE class=middlebodytext height="100%" cellSpacing=0 
+                  cellPadding=6 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top>
+                        <TABLE>
+                          <TBODY>
+                          <TR>
+                            <TD height=6></TD></TR></TBODY></TABLE>
+                        <DIV align=left><IMG 
+                        src="ActiveComport - Send Hayes AT commands to a modem_fichiers/ttl_acomport.gif" 
+                        border=0></DIV>
+                        <HR SIZE=1>
+                        <A 
+                        href="http://www.activexperts.com/download?param1=ACTIVECOMPORT">Download 
+                        ActiveComport Serial Port Toolkit 2.1</A>&nbsp;&nbsp;<A 
+                        href="http://www.activexperts.com/download?param1=ACTIVECOMPORT"><IMG 
+                        src="ActiveComport - Send Hayes AT commands to a modem_fichiers/download_small.gif" 
+                        border=0></A>&nbsp;&nbsp;<I>(1270 KB - .exe 
+                        file)</I><BR><A 
+                        href="http://www.activexperts.com/files/activcomport/manual.htm" 
+                        target=_blank>Download Manual</A>&nbsp;&nbsp;<A 
+                        href="http://www.activexperts.com/files/activcomport/manual.htm" 
+                        target=_blank><IMG 
+                        src="ActiveComport - Send Hayes AT commands to a modem_fichiers/download_small.gif" 
+                        border=0></A>&nbsp;&nbsp;<I>(101 KB - .htm file)</I><BR>
+                        <HR SIZE=1>
+                        <BR><BR><FONT size=5><B>HAYES AT COMMAND 
+                        SET</B></FONT><BR><BR><BR>
+                        <H1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overview</H1><BR><A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#FUNCTIONALSTATES">Functional 
+                        States</A><BR><A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#CONFIGPROFILES">Configuration 
+                        Profiles</A><BR><A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#ATSYNTAX">AT 
+                        Command Syntax</A><BR><A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#ATSET">AT 
+                        Command set</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#ATSETPART1">PART 
+                        I : Data Command Set</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#ATSETPART2">PART 
+                        II : Fax Command Set</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#ATSETPART3">PART 
+                        III : Voice Command 
+                        Set</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#ATSETPART4">PART 
+                        IV : SMS Command Set</A><BR><A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#ATRESULTCODES">AT 
+                        Command Set Result Codes</A><BR><A 
+                        href="http://www.activexperts.com/activcomport/hayesat/#STATUSREGISTERS">Status 
+                        Register Summary: S Registers</A><BR><BR><BR>
+                        <H1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        name=FUNCTIONALSTATES>Functional States</A></H1><BR><PRE>In AT command operating environment, the modem has four functional states: 
+
+The command state, 
+The wait-for-carrier state, 
+The on-line state, and 
+The on-line command state. 
+
+In the command state, the modem accepts AT commands form the terminal, allowing you to configure the modem and dial telephone numbers. When the modem is powered on, it defaults to the command state. 
+
+After modem dials a number, it enters a transition state, called the wait-for carrier state and waits for a carrier signal from the remote modem. If the modem does not detect a carrier signal within a preset time period (this period is defined by the value of S7 register), it abandons the call and re-enters the command state. You can also cause the modem to exit the wait-for-carrier state and return to the command state by pressing any key on the keyboard, causing a dial abort action. 
+
+If modem detects a valid carrier signal, it connects with the remote modem, according to the best negotiation speed decided by both modems, and enters the on-line state. In this case, the modem transmits data asynchronously. If the carrier signal is lost or intentionally dropped the connection, the modem hangs up and re-enters the command state. 
+
+While the modem is on line, you can temporarily exit the on-line state, and enter the on-line command state, from which limit set of AT commands can be entered to interrogate the modem current settings and make sure the connection is what is supposed to be and to disconnect the line gracefully. 
+
+To enter the on-line command state, wait 1 second, type +++, wait another 1 second, and type AT, carriage return (this procedure is called Time Independent Escape Sequence, TIES). The first valid AT commands entered while the modem in the on-line command state will be executed just as they would be executed in the command state. If the first command is Invalid in this state, it will cause modem be to on-line state and you will have on-line connect message shown on the screen. 
+
+After the first command is accepted and in the on-line command state, the rest AT commands will accepted with OK or rejected with ERROR and stay in this state until 
+1. You issue ATO command to re-enter the on-line state, 
+2. You issue ATH to drop the connection and back to command state, 
+3. Connection is disconnected and the modem go back to command, 
+4. Application program request modem to disconnect and go back to command state.
+</PRE><BR>
+                        <H1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        name=CONFIGPROFILES>Configuration Profiles</A></H1><BR><PRE>A configuration profile refers to a complete set of operation parameters for the modem. The operating parameters in use at any one time are referred to as active profile. The active profile is stored in RAM in the modem and it may be viewed by entering AT&amp;V. Each time the modem powers up, the active profile is loaded with profile 0 or 1 at the time modem was last powered off 
+
+You can store the active profile into profile 0 or profile 1 and into the non-volatile memory (EEPROM) by entering AT&amp;W0 or AT&amp;W1. So next time the modem is powered up, you can assume the profile while you left off. 
+
+The factory default profile, which is stored in ROM in the modem, consists of the operating parameters most commonly used for data communication and is satisfactory for the needs of most users. The default profile can be reload into active profile by entering AT&amp;F. 
+</PRE><BR>
+                        <H1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        name=ATSYNTAX>AT Command Syntax</A></H1><BR><PRE>With two exceptions, all AT commands are prefixed with AT (uppercase or lowercase, even, odd, none, mark or space parity do not matter), which stands for "ATtention", command body, list in the following sections, and command line terminator, most commonly used is carriage return. 
+
+The two exceptions are the "A/" command, which is used to repeat the last command, and the "+++" , which cause modem goes into on-line command state. 
+
+There are 40 characters length limitation post on every single command line. Any command line exceed this limitation will results an ERROR result. 
+</PRE><BR>
+                        <H1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A name=ATSET>AT 
+                        Command set</A></H1><BR>
+                        <H2>&nbsp;<A name=ATSETPART1>PART I : Data Command 
+                        Set</A></H2><BR><PRE>General Command 
+
+A/ Repeat the last executed AT command 
+Do not precede A/ with AT or follow with ENTER. 
+
+AT Attention Characters 
+'AT' character pairs always at the beginning of each command line, except 'A/', which is to repeat the last executed AT command. 
+
+Note: The following commands always have to precede with 'AT' attention character pair, if it is the first command in the command line. 
+
+A Manually answer incoming call 
+
+D Dial (Originate a Call) 
+The following modifiers can be used in the dial string: 
+0-9,#,* Dialing digits. Touch Tone dial 
+characters 
+P Pulse dialing 
+T Touch Tone dialing 
+W Wait for second dial tone 
+, Pause (programmable by S8) 
+^ Enable 1300 Hz calling tone 
+! Flash (delay 500 ms) 
+; Return to command mode 
+
+DS=n Dial stored number 
+Dials one of three telephone numbers ( n = 
+0,1 or 2 ) which is stored in the modem's 
+nonvolatile memory via AT&amp;Zn=x command. 
+
+En Command Echo 
+E0 Disables command echo 
+E1* Enables Command echo 
+
++++ Default Escape Character 
+To switch from data mode to command mode, you can pause one second and type '+++'. Do not follow with carriage return. The default ASCII character '+' is decimal 43. You can change register S2 to any value from 0 to 255. Values greater than 127 disable the escape feature and prevent you from returning to the Command Mode. Please refer to S2 and S12. 
+
+Hn Hook control 
+H0* Modem is on-hook (disconnect from line) 
+H1 Modem is off-hook (connect to line) 
+
+In Identification 
+I0* Display product-identification code 
+I1 Factory set 
+I2 Internal memory test 
+I3 Firmware version 1 
+I4 Firmware version 2 
+
+Ln Volume Control 
+L0 Speaker volume off 
+L1 Low speaker volume 
+L2* Medium speaker volume 
+L3 Loud speaker volume 
+
+Mn Speaker Control 
+M0 Speaker off 
+M1* Speaker on until carrier detected 
+M2 Speaker always on 
+M3 Speaker on until carrier detected and off 
+while dialing 
+
+Nn Auto mode Selection 
+N0 Disable auto mode. Modem connect speed is fixed according to AT*Nn setting. 
+N1* Enable adaptive connect speed (The hightest speed is set by AT*n) 
+
+On Return to Data Mode Selection 
+O0* Return to Data Mode 
+O1 Return to Data Mode and initiate a retrain 
+
+Qn Modem Response Selection 
+Q0* Modem sends responses 
+Q1 Modem does not sends responses 
+
+Sr? Reads Register r Value. r is an applicable number between 0 to 97. 
+
+Sr=n Set Register r to Value n 
+r is an applicable number between 0 to 97, n is an applicable number between 0 to 255. 
+
+Un V.34 Control 
+U0 Disable V.34 when AT*N1 - AT*N6 
+U1 Enable V.34 
+U2 Enable V.34 aggressive connection, which will connect the ultimate speed, but with penalty of data integration. 
+
+Vn Responses Selection 
+V0 Enable numeric responses 
+V1* Enable verbose (text) responses 
+
+Xn Response Set Selection (See table 1) 
+X0 Report basic call progress result codes. 
+X1 Report basic call progress result codes and connections speeds, disable dial tone and busy tone detection. 
+X2 Report basic call progress result codes and connections speeds, disable busy tone detection only. 
+X3 Report basic call progress result codes and connections speeds, disable dial tone detection only. 
+X4* Report all call progress result codes and connection rate. 
+
+Yn Long Space Disconnect Selection 
+Y0* Disables long space disconnect. Modem does not send or respond to long space disconnect. 
+Y1 Enables long space disconnect. Modem sends break signal for 4 seconds before disconnect or will disconnect after receiving 1.6 seconds of break from remote modem. 
+
+Wn Display 
+W0* Display DCE rate. 
+W1 Display DTE rate. 
+
+
+Zn Reset and Profile Retrieve Selection 
+Z0* Reset modem and retrieve active configuration profile from stored configuration profile 0. 
+Z1 Reset modem and retrieve active configuration profile from stored configuration profile 1. 
+
+&amp;Cn Carrier Output Selection 
+&amp;C0 Keep Data Carrier Detect (DCD) signal always ON. 
+&amp;C1* Set Data Carrier Detect (DCD) signal according to remote modem data carrier signal. 
+
+&amp;Dn Data Terminal Ready (DTR) Signal Handling 
+&amp;D0 Modem ignores the Data Terminal Ready signal from host. 
+&amp;D1 Modem returns to Command Mode and asynchronous operation following an ON-to-OFF Data Terminal Ready transition. 
+&amp;D2* Modem hangs up, returns to the Command Mode, and prepares for asynchronous operation following an ON-to-OFF Data Terminal Ready transition. 
+&amp;D3 Modem resets following an ON-to-OFF Data Terminal Ready transition and retrieves modem default configuration (Same as ATZ). 
+
+&amp;F Load Modem Factory Default Configuration 
+Restores the modem to the default operating characteristics. 
+
+&amp;Gn Guard Tone Selection 
+&amp;G0* Disable guard tone 
+&amp;G1 Enable 550 Hz guard tone 
+&amp;G2 Select 1800 Hz guard tone 
+
+&amp;Ln Dial-up or Leased-Line Operation Selection 
+&amp;L0* Modem is setup for dialup operation 
+&amp;L1 Modem is setup for 2-wire leased-line operation 
+&amp;L2 Modem is setup for 4-wire leased-line operation 
+
+&amp;Pn Make/Break Ratio 
+&amp;P0* US setting for off-hook (make) to on-hook (break) ratio 
+&amp;P1 UK and Hong Kong setting for off-hook to on-hook ratio 
+
+&amp;Rn Clear To Send (CTS) Signal Selection 
+&amp;R0 Modem turns on the Clear To Send signal when it detects the Request To Send (RTS) signal from host. 
+&amp;R1 Modem ignores the Request To Send signal and turns on its Clear To Send signal when ready to receive data. 
+&amp;R2* Clear To Send force on. 
+
+&amp;Sn Data Set Ready (DSR) Signal Selection 
+&amp;S0* Data Set Ready is forced on 
+&amp;S1 Data Set Ready to operate according to RS-232 specification 
+
+&amp;Tn Test Selection 
+&amp;T0* Terminates test in progress 
+&amp;T1 Performs Local Analog Loopback Test 
+
+&amp;V Configuration Profile Display Selection 
+
+&amp;Wn Active Configuration Profile Store Selection 
+&amp;W0* Stores active configuration profile in configuration profile 0. 
+&amp;W1 Stores active configuration profile in configuration profile 1. 
+
+&amp;Yn Selection of the Active Configuration After Power-On or Reset 
+&amp;Y0* Retrieves configuration profile 0 as the active configuration profile when the Modemis turned on or is reset. 
+&amp;Y1* Retrieves configuration profile 1 as the active configuration profile when the Modem is turned on or is reset. 
+
+&amp;Zn=x Store Telephone Numbers in Nonvolatile 
+Memory. Stores three telephone numbers, 31 characters each, in the non-volatile memory. 
+Uses ATDS=n to dial or to use AT&amp;M2 for 
+synchronous data mode. 
+
+*Gn Adaptive Handshake Selection 
+*G0 Disables adaptive protocol handshake 
+*G1* Enables adaptive protocol handshake 
+
+*Nn Connect Speed Selection 
+*N0 Selects connect speed 1200bps 
+*N1 Selects connect speed 2400bps 
+*N2 Selects connect speed 4800bps 
+*N3 selects connect speed 7200bps 
+*N4 Selects connect speed 9600bps 
+*N5 Selects connect speed 12000bps 
+*N6 Selects connect speed 14400bps 
+*N7 Selects connect speed 16800bps 
+*N8 Selects connect speed 19200bps 
+*N9 Selects connect speed 21600bps 
+*N10 Selects connect speed 24000bps 
+*N11 Selects connect speed 26400bps 
+*N12 Selects connect speed 28800bps 
+*N13 Selects connect speed 31200bps 
+*N14* Selects connect speed 33600bps 
+*N15 Selects connect speed 1200/75bps 
+*N16 Selects connect speed 300bps (V.21) 
+*N17 Selects connect speed 300bps (Bell 103) 
+
+*Pn User Abort Selection 
+*P0* Enables user abort feature 
+*P1 Disables user abort feature 
+
+*Qn Auto Retrain Selection 
+*Q0 Disables auto retrain 
+*Q1* Enables auto retrain 
+
+*Tn Trellis Coding Selection 
+*T0 Disables Trellis coding 
+*T1* Enables Trellis coding 
+
+*Xn Transmission Level Selection 
+*X0* Selects output level -11dBm 
+*X1 Selects output level -12dBm 
+*X2 Selects output level -13dBm 
+*X3 Selects output level -14dBm 
+*X4 Selects output level -15dBm 
+*X5 Selects output level -16dBm 
+*X6 Selects output level -17dBm 
+*X7 Selects output level -18dBm 
+*X8 Selects output level -19dBm 
+*X9 Selects output level -20dBm 
+*X10 Selects output level -21dBm 
+*X11 Selects output level -22dBm 
+*X12 Selects output level -23dBm 
+*X13 Selects output level -24dBm 
+*X14 Selects output level -25dBm 
+*X15 Selects output level -26dBm 
+
+V.42bis / MNP Command Set 
+
+%An Set Auto-Reliable Fall Back Character 
+Set auto-reliable fall back character to n (n = 0 to 127). 
+
+\An MNP Block Size Selection 
+\A0 Selected 64-character maximum block size 
+\A1 Selected 128-character maximum block size 
+\A2 Selected 192-character maximum block size 
+\A3* Selected 256-character maximum block size 
+
+\Bn Set Line Break 
+Send a n/10 seconds line break to the modem (n = 0 to 9). Default = 3. Break length always 300 msec for MNP mode. 
+
+%Cn Data Compression 
+%C0 Disables data compression 
+%C1* Enables data compression 
+
+\En Normal Mode Data Echo Selection 
+\E0* Disables data echo during a normal link 
+\E1 Enables data echo during a normal link 
+
+\Kn Break Control Selection 
+\K0 Enters the Command Mode, but does not send a Break to remote modem. (To send a Break after use the \B command). 
+\K1 Empty data buffers and immediately sends a Break to remote. 
+\K2 Same as AT\K0. 
+\K3 Immediately send a Break. 
+\K4 Same as AT\K0. 
+\K5* Send a Break in sequence with any data 
+received from host. 
+
+\Nn Data Link Selection 
+\N0 Selects Normal data link 
+\N1 Selects Direct data link 
+\N2 Selects MNP Reliable link only 
+\N3 Selects MNP Auto-reliable link 
+\N4 Selects V.42 reliable link with phase detection 
+\N5* Selects V.42 auto-reliable link with phase detection 
+\N6 Selects V.42 reliable link without phase detection 
+\N7 Selects V.42 auto-reliable link without phase detection 
+
+\Qn Flow Control Selection 
+\Q0 Disables flow control 
+\Q1 Selects XON\XOFF in-band flow control 
+\Q2 Selects CTS hardware flow control 
+\Q3* Selects RTS\CTS hardware flow control 
+
+\Tn Set Inactive Timer 
+Set inactivity timer to n minutes (n = 0 to 90 ). Default = 0. 
+
+\Vn V42/MNP Extended Response Selection 
+\V0 Disables V42/MNP extended responses 
+\V1* Enables V42/MNP extended responses 
+
+\Xn XON\XOFF Pass-through Selection 
+\X0* Process XON\XOFF and don't pass through 
+\X1 Processes XON\XOFF and pass through 
+
+Wn DTE/DCE Speed Response Selection 
+W0 Display DCE connection rate 
+W1* Display DTE connection rate 
+
+&amp;Kn Flow Control Selection 
+&amp;K0 Disable Local flow control 
+&amp;K3* Selects RTS\CTS hardware flow control 
+&amp;K4 Selects XON\XOFF in-band flow control 
+&amp;K5 Selects Transparent XON\XOFF in-band flow control 
+
+&amp;Mn Data Connection Selection 
+&amp;M0 Selects Direct data link 
+&amp;M5* Instructs the modem to make a data connection using V.42 standard 
+</PRE><BR>
+                        <H1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        name=ATRESULTCODES>AT Command Set Result 
+                        Codes</A></H1><BR><PRE>Result Code (Table 1) 
+Long Form Short Form n value in ATXn 
+0 1 2 3 4 
+OK 0 x x x x x 
+CONNECT 1 x x x x x 
+RING 2 x x x x x 
+NO CARRIER 3 x x x x x 
+ERROR 4 x x x x x 
+CONNECT 1200 5 x x x x 
+NO DIALTONE 6 x x 
+BUSY 7 x x 
+NO ANSWER 8 x x 
+CONNECT 600 9 x x x x x 
+CONNECT 2400 10 x x x x 
+CONNECT 4800 11 x x x x 
+CONNECT 9600 12 x x x x 
+CONNECT 7200 13 x x x x 
+CONNECT 12000 14 x x x x 
+CONNECT 14400 20 x x x x 
+CONNECT 19200 21 x x x x 
+CONNECT 38400 22 x x x x 
+CONNECT 57600 23 x x x x 
+CONNECT 115200 24 x x x x 
+CONNECT 1200RX/75TX 25 x x x x 
+CONNECT 75TX/1200RX 26 x x x x 
+RINGBACK 27 x x x x 
+CONNECT BELL 300 28 x x x x 
+CONNECT V21 29 x x x x 
+
+( Display DCE speeds by ATW0 ) 
+
+CONNECT 16800 15 x x x x 
+CONNECT 19200 16 x x x x 
+CONNECT 21600 17 x x x x 
+CONNECT 24000 21 x x x x 
+CONNECT 26400 30 x x x x 
+CONNECT 28800 31 x x x x 
+CONNECT 31200 32 x x x x 
+CONNECT 33600 33 x x x x 
+</PRE><BR>
+                        <H2>&nbsp;<A name=ATSETPART2>PART II : Fax Command 
+                        Set</A></H2><BR><PRE>Fax Class 2 Command 
+
++FCLASS=n Data or Fax Mode Selection 
++FCLASS=0 Selects Data mode operation 
++FCLASS=2 Selects Fax Class 2 mode operation 
+
++FAA=n Fax Auto Answer Mode Selection 
++FAA=0 Disables Fax Auto Answer operation 
++FAA=1 Enables Auto detection of Data or Fax operations 
+
++FBOR=n Phase C Data Bit Order Selection 
++FBOR=0 Selects direct bit order for both Phase C data and for Phase D data 
++FBOR=1 Selects reversed bit order for Phase C data and selects direct bit order for Phase D data. 
+
++FCR= Capability to Receive 
++FCR=0 Indicates the DCE will not receive message data. Also the DCE will not be able to poll a remote device. 
++FCR=1 Indicates the DCE can receive message data. 
+
++FDCS=vr, br, wd, ln, df, er, ft, st 
+Set Current Session Parameters 
+
++FDCC=vr, br, wd, ln, df, er, ft, st 
+Set DCE Capabilities Parameters 
+
++FDIS=vr, br, wd, ln, df, er, ft, st 
+Set Current Session Negotiation Parameters 
+
++FDR Receive Data Command 
+
++FDT Transmit Data Command 
+
++FLID=" Set Local ID String 
+'m' is 20 characters numeric string, set by user, to be used in TSI or CSI frame. 
+
++FMDL? Request Model Information 
+
++FMFR? Request Manufacturer Information 
+
++FREV? Request Revision Information 
+
+The Fax class 2 mode Result codes are: 
+
+OK Command valid and executed successfully. 
+
+ERROR Command error and can not be executed. 
+
++FCFR Confirmation to receive prompt 
+Modem issues the response when detects an acceptable TCF training burst and a valid DCS signal from remote modem. 
+
++FCON Facsimile connection response 
+Modem issues the response when detects call progress and fax handshaking is in progress. 
+
++FCSI:'m' Report the called station ID response 
+Modem issues this after receiving the remote ID string. 
+
++FDCS:vr, br, wd, ln, df, er, ft, st 
+Report session parameters response 
+
++FDIS:vr, br, wd, ln, df, er, ft, st 
+Report remote capabilities response 
+
++FET: Post page message response 
+Modem issues this after the end of Phase C reception, on receipt the post page message from the transmitting modem. 
+0 MPS Another page, same parameters 
+1 EOM Anther document, new page parameters. 
+2 EOP No more pages or documents. 
+
++FHNG:m Call termination status response 
+Modem issues this to indicate the call has been terminated. 
+
++FPTS: Page transfer status response 
+Modem issues this indicating the copy quality and related post page message responses received from the remote modem. 
+
++FTSI: Report remote station ID 
+Modem issues this after receiving TSI from calling station. 
+</PRE><BR>
+                        <H2>&nbsp;<A name=ATSETPART3>PART III : Voice Command 
+                        Set</A></H2><BR><PRE>Voice Command 
+
+#BDR Baud Rate Selection 
+#BDR? Returns the current setting of the #BDR 
+#BDR=? Shows available settings 
+#BDR=0* Enable auto baud detection 
+#BDR=n Where n = 1,2,4,6,8,16,24. Sends OK message and switches to the new speed defined by n*2400 bps. 
+
+#CID Caller ID Selection 
+#CID Returns the current settings of #CID 
+#CID=? Shows available settings 
+#CID=0* Disable Caller ID 
+#CID=1 Enables formatted Caller ID reporting Single Data Message (SDM) and Multiple Data Message (MDM) packets. 
+#CID=2 Enables unformatted Caller ID reporting of any CID packet received after the first RING cycle including SDM, MDM, or call waiting packet. 
+
+#CLS Data, Fax or Voice Mode Selection 
+#CLS? Returns the current setting of the #CLS 
+#CLS=? Shows available settings 
+#CLS=0* Selects data mode operation 
+#CLS=2 Selects fax class 2 command operation 
+#CLS=8 Selects voice mode operation 
+
+#MDL? Request Model Information 
+
+#MFR? Request Manufacturer Information 
+
+#REV? Request Revision Information 
+
+#SPK=m,n,o Speaker Phone Control 
+m=0 speaker phone mode 
+m=1 microphone modem 
+n,o dummy parameters 
+
+#TL=XXXX Voice Playback Volume Control 
+#TL=0 mute, means no volume 
+#TL=1 -24db, low volume 
+#TL=2 -18db 
+#TL=3 -12db 
+#TL=4 -6db 
+#TL=5* -0db 
+#TL=6 +6db 
+#TL=7 +12db 
+#TL=8 +18db, high volume 
+
+#VBQ? Query Buffer Size (Response 20) 
+
+#VBS Bits Per Sample Selection 
+#VBS? Returns the current setting of #VBS 
+#VBS=? Shows available settings 
+#VBS=2 Selects 2 bits per sample ADPCM 
+#VBS=3 Selects 3 bits per sample ADPCM 
+#VBS=4* Selects 4 bits per sample ADPCM 
+
+#VBT Beep Tone Timer 
+#VBT? Returns the current setting of the #VBT command 
+#VBT=? Shows available settings 
+#VBT=0 Disables the tone generation capability 
+#VBT=n Sets tone duration time in 100 msec. Where n = 1-40. Default is 10. 
+
+#VCI? Request Compression Method Information 
+
+#VLS Voice Line Selection 
+#VLS? Returns the current setting of the #VLS 
+#VLS=? Shows available settings 
+#VLS=0* This command causes the telephone line interface to be routed through the modem. 
+#VLS=1 This command causes the handset to be routed through the modem. 
+#VLS=2 This command routes the speaker through the modem. 
+#VLS=3 This command routes the auxiliary input device through the modem. 
+#VLS=4 This command is the same as #VLS=0, except the modem enables the internal speaker. 
+#VLS=5 This command enables the microphone and speaker interface, use for speaker phone mode. 
+#VLS=6 This command enables the microphone and speaker interface, use for speaker phone mode. 
+
+#VRX Set Voice Receive Mode 
+This action command is only valid if the modem is in the on-line voice command mode. 
+
+#VSP Set Silence detection Period ( 0 - 255) 
+#VSP? Returns the current settings 
+#VSP=? Shows available settings 
+#VSP=n Where n defines the period without received voice data in 100 ms units 
+
+#VSS Silence Detection Enable/Disable 
+#VSS? Returns the current settings 
+#VSS=? Shows available settings 
+#VSS=0 Disable silence detection 
+#VSS=1 Set silence detection to lease sensitive setting 
+#VSS=2 Set silence detection to midrange sensitive setting 
+#VSS=1 Set silence detection to most sensitive setting 
+
+#VTS Play DTMF/Tone String 
+#VTS=m,n,o Send Beep Tone for 1 sec 
+m,n,o are dummy parameters 
+#VTS=p,q Send DTMF ' for '*100ms 
+where p ranges from 0 to 9, or from A to F, q ranges from 0 to 255. 
+
+#VTX Set Voice Transmit Mode 
+This action command is only valid if the modem is in the on-line voice command mode. 
+
+#VRA Ring Back Goes Away Timer 
+#VRA? Returns the current setting 
+
+#VRN Ring Back Never Came Timer 
+#VRN? Returns the current setting 
+
+#VSD Silence Detection Enable/Disable 
+#VSD? Returns the current setting 
+
+#VSK Buffer Skid Setting 
+#VSK? Returns the current setting 
+
+#VSR Sampling Rate Selection 
+#VSR? Returns the current setting 
+
+#VTD DTMF Tone Report Capability 
+#VTD? Returns the current setting 
+
+
+Voice mode Result codes 
+
+OK Command valid and executed successfully 
+
+ERROR Command error and can not be executed 
+
+VCON Issued in Voice mode (#CLS=8) when the modem determines that the remote modem or handset has gone off-hook, or when returning to on-line voice command mode. 
+
+NO ANSWER Issued in Voice mode (#CLS=8) when the modem determines that the remote modem has not picked up the line after the S7 timer has expired. 
+
+CONNECT When Voice transmission by DTE can begin 
+
+
+Voice mode Shielded codes 
+
+0-9 DTMF digits 0 through 9 
+*,# DTMF digits *, # 
+A-D DTMF A through D 
+a Answer Tone detected, V.35/T30 2100Hz answer tone is detected 
+b Busy, the busy cadence is detected 
+c Calling Tone, T.30 1100Hz Calling tone is detected. 
+d Dial Tone, the Dial tone is detected 
+e European Calling Tone, V.25 1300Hz Calling Tone is detected 
+f Bell Answer Tone, Bell 2225Hz Answer tone is detected 
+</PRE><BR>
+                        <H2>&nbsp;<A name=ATSETPART4>PART IV : SMS Command 
+                        Set</A></H2><BR><PRE>This is used for interfacing with mobile phones and other SMS enabled devices. It is an extention of the orignal Hayes AT modem command set. 
+
+AT+CSMS: Select Message Service: 
+
+Command Possible response(s) +CSMS=&lt;Service&gt; +CSMS: &lt;mt&gt;,&lt;mo&gt;,&lt;bm&gt;
+
++CMS ERROR: &lt;err&gt;
+
++CSMS?+CSMS: &lt;service&gt;,&lt;mt&gt;,&lt;mo&gt;,&lt;bm&gt; +CSMS=?+CSMS: (List of supported &lt;service&gt;s)
+
+&lt;service&gt;: 0;
+
+&lt;mt&gt;,&lt;mo&gt;,&lt;bm&gt;: 0=not supported, 1=supported
+
+
+
+
+AT+CPMS: Preferred Message Storage:
+
+Command Possible response(s) +CPMS=&lt;mem1&gt;[,&lt;mem2&gt;[,&lt;mem3&gt;]] +CPMS: &lt;used1&gt;,&lt;total1&gt;,&lt;used2&gt;,&lt;total2&gt;,&lt;used3&gt;,&lt;total3&gt; +CPMS?+CPMS: &lt;mem1&gt;,&lt;used1&gt;,&lt;total1&gt;,&lt;mem2&gt;,&lt;used2&gt;,&lt;total2&gt;,... +CPMS=?+CPMS: (List of supported &lt;mem1&gt;s), (List of supported &lt;mem2&gt;s), (List of supported &lt;mem3&gt;s)
+
+&lt;mem1&gt;: Memory used for reading and deleting of SMS messages (+CMGL, +CMGR, CMGD command's).
+
+&lt;mem2&gt;: Memory used for writing and sending of SMS messages (+CMGW-commando)
+
+Defined values:
+
+ME : Mobile Equipment, the handset; 
+SM : SIM card; 
+
+
+
+AT+CMGF: Message Format:
+
+Command Possible response(s) +CMGF=[&lt;mode&gt;]  +CMGF?+CMGF: &lt;mode&gt; +CMGF=?+CMGF: (list of supported &lt;mode&gt;s)
+
+&lt;mode&gt;:
+
+0: PDU mode; 
+1: text mode; 
+--&gt; Only text mode is implemented.
+
+
+
+AT+CSCA: Service Center Address:
+
+Command Possible response(s) +CSCA=&lt;sca&gt;[,&lt;tosca&gt;]  +CSCA?+CSCA: &lt;sca&gt;,&lt;tosca&gt; +CSCA=?
+
+&lt;sca&gt; = service center address;
+
+SCA for Proximus Belgium is "+32 75 16 16 16". This always should contain the country code number!! Sending an SMS message doesn't work when the SCA number is not entered!
+
+
+
+AT+CSMP: Set Text Mode Parameters:
+
+Command Possible response(s) +CSMP=[&lt;fo&gt;[,&lt;vp&gt;[,&lt;pid&gt;[,&lt;dcs&gt;]]]]  +CSMP?+CSMP: &lt;fo&gt;,&lt;vp&gt;,&lt;pid&gt;,&lt;dcs&gt; +CSMP=?
+
+&lt;fo&gt;: First octet of SMS-DELIVER, SMS-SUBMIT (default 17), SMS-STATUS-REPORT, or SMS-COMMAND (default 2); 
+&lt;vp&gt;: Validity Period, depending on &lt;fo&gt;-setting in integer format or in time-string format; 
+&lt;pid&gt;: TP-protocol Indentifier; 
+&lt;dcs&gt;: Data Coding Scheme in integer format; 
+---&gt; Default values: +CSMP: 17,167,0,0,0
+
+
+
+AT+CSDH: Show Text Mode Parameters:
+
+Command Possible response(s) +CSDH=[&lt;show&gt;]  + CSDH?+CSDH: &lt;show&gt; +CSDH=?+CSDH: (list of supported &lt;show&gt;s)
+
+&lt;Show&gt;:
+
+0: do not show header values defined in commands +CSCA and +CSMP (&lt;sca&gt;,&lt;tosca&gt;,&lt;fo&gt;,&lt;vp&gt;,&lt;pid&gt; and &lt;dcs&gt;) nor &lt;length&gt;,&lt;toda&gt;,&lt;tooa&gt; in +CMT, +CMTL, +CMGR result codes; 
+1: show the values in result codes; 
+---&gt; Only '0' is supported, so no extra parameters in the result codes.
+
+
+
+AT+CNMI: New Message indication to TE
+
+Command Possible response(s) +CNMI=[&lt;mode&gt;[,&lt;mt&gt;[,&lt;bm&gt;[,&lt;ds&gt;[,&lt;bfr&gt;]]]]]  +CNMI?+CNMI: &lt;mode&gt;,&lt;mt&gt;,&lt;bm&gt;,&lt;ds&gt;,&lt;bfr&gt; +CNMI=?+CSCB: (list of supported &lt;mode&gt;s,&lt;mt&gt;s,&lt;bm&gt;s,&lt;ds&gt;s,&lt;bfr&gt;s)
+
+&lt;mode&gt;:
+
+0: buffer in TA; 
+1: discard indication and reject new SMs when TE-TA link is reserved; otherwise forward directly; 
+2: buffer new Sms when TE-TA link is reserved and flush them to TE after reservation; otherwise forward directly to the TE; 
+3: forward directly to TE 
+&lt;mt&gt;:
+
+0: no SMS-DELIVER are routed to TE; 
+1: +CMTI: &lt;mem&gt;,&lt;index&gt; routed to TE; 
+2: for all SMS_DELIVERs except class 2: +CMT: .... routed to TE; class 2 is indicated as in &lt;mt&gt;=1; 
+3: Class 3: as in &lt;mt&gt;=2; 
+other classes: As in &lt;mt&gt;=1; 
+&lt;bm&gt;: same as &lt;mt&gt;, but for CBMs;
+
+&lt;ds&gt;:
+
+0: No SMS-STATUS-REPORT are routed to TE; 
+1: SMS-STATUS-REPORTs are routed to TE, using +CDS: ... 
+&lt;bfr&gt;:
+
+0: TA buffer is flushed to TE (if &lt;mode&gt;=1..3); 
+1: TA buffer is cleared (if &lt;mode&gt;=1..3); 
+---&gt; Only when &lt;mt&gt; is different from 0, you will get a message that a new SMS has been received.
+
+
+
+AT+CMGL: List Messages:
+
+Command Possible response(s) +CMGL[=&lt;stat&gt;] +CMGL: message... +CMGL=?+CMGL: (list of supported &lt;stat&gt;s)
+
+&lt;stat&gt;: status of messages to be read. defined values:
+
+0: received unread 
+1: received read; 
+2: stored unsent; 
+3: stored sent; 
+4: all; 
+
+
+AT+CMGR: Read Message:
+
+Command Possible response(s) +CMGR=&lt;index&gt; +CMGR: message... +CMGR=? 
+
+
+
+AT+CMGS: Send Message:
+
+Command Possible response(s) +CMGS=&lt;da&gt;[,&lt;toda&gt;] +CMGS: &lt;mr&gt; +CMGS=?
+
+&lt;da&gt; = Destination Address;
+
+
+
+AT+CMGW: Write Message to Memory:
+
+Command Possible response(s) +CMGW=&lt;oa/da&gt;[,&lt;tooa&gt;/&lt;toda&gt;[,&lt;stat&gt;]] +CMGW: &lt;index&gt; +CMGW=?
+
+
+
+AT+CMGD: Delete Message:
+
+Command Possible response(s) +CMGD=&lt;index&gt;  +CMGD=?
+
+Examples;
+
+AT+CSMS=0
+// Only &lt;mo&gt; and &lt;mt&gt; SM's are supported
++CSMS: 1,1,0
+OK
+Important Note
+If the card returns ERROR, then the modem does not support SMS. Please try updating with the latest GSM Activation Kit for GSM-Ready, or for GSM-Only.
+AT+CPMS?
+AT+CPMS: "SM",1,10,"ME",4,5
+OK
+//Swap memories
+AT+CPMS="ME","SM"
+OK
+//select text-mode (DEFAULT!!)
+AT+CMGF=1
+OK
+//Enter SCA number (for Belgium, Proximus). This number is operator and country dependent. Please check with your local provider.
+AT+CSCA="+3275161616"
+OK
+//Enable the reception of SM's
+AT+CNMI=1,1,0,0,0
+//a SM is received and stored in ME, index 3
++CMTI: "ME",3
+//Make sure memory is OK 
+AT+CPMS="ME"
+OK
+//Read message 
+AT+CMGR=3
++CMGR: "REC UNREAD",,,
+Hello world
+OK
+//Read all messages in ME
+AT+CMGL=4
+// --&gt; Only index 3 en 5 are used 
++CMGL: 3,"REC UNREAD",,, ;
+Hello world
+//Send message to "075261001"
+AT+CMGS="075261001"
+&gt; Honey….put my dinner in the microwave. I'm on my way!!^Z (Ctrl+Z to finish and send the message)
+//OK, message gone
++CMGS: 3
+OK 
+
+
+
+CMS Errors
+
+300: ME Failure; 
+302: Operation not allowed; 
+303: Operation not supported; 
+304: Invalid PDU mode parameter; 
+305: Invalid text mode parameter; 
+320: memory failure; 
+321: invalid memory index; 
+322: memory full; 
+330: SCA unknown; 
+500: Unknown error 
+</PRE><BR>
+                        <H1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A 
+                        name=STATUSREGISTERS>Status Register Summary: S 
+                        Registers</A></H1><BR><PRE>Register S0 : Auto Answer Ring 
+
+Assigning a value from 1 to 255 in Register S0 tells the modem the number of rings that must occur before it can automatically answer incoming calls. The default value = 0 ( no Auto Answer). 
+
+Register S1 : Count Incoming Rings 
+
+The S1 register records the number of incoming rings. Reset to 0 after 8 seconds of no ring. 
+
+Register S2 : Value of the Escape Character 
+
+Register S2 sets the ASCII value in decimal of the escape character. The default value (decimal 43) is equivalent to the ASCII character '+'. You can change this register to any value from 0 to 255. Values greater than 127 disable the escape feature. 
+
+Register S3 : Value of the Carriage Return Character 
+
+Register S3 sets the ASCII value in decimal of the carriage return character (End-Of-Line). The default value is 13. You can change it to any ASCII value between 0 and 127. 
+
+Register S4 : Value of the Line Feed Character 
+
+Register S4 sets the ASCII value in decimal of the line feed character. The default value is 10. You can change it to any ASCII value between 0 and 127. If you do not want to receive a line feed character, you can change the value in this register to a null character, but you cannot disable line feed characters. 
+
+Register S5 : Value of the Backspace Character 
+
+Register S5 sets the ASCII value in decimal of the backspace character. This character is the character created by pressing BACKSPACE key and the characters echo to host are BACKSPACE, SPACE, BACKSPACE ( i.e. move the cursor to the left ). The default value is 8. You can change it to any ASCII value between 0 and 32, or 127. 
+
+Note: Do not set the value of the backspace character between 33 and 126. 
+
+Register S6 : Dial Tone Wait Time 
+
+Register S6 sets the time to wait for dial tone before dialing the first digit in a Dial command when using the X0, X1 or X3 responses. The default time is 6 seconds, although you can change it to any value between 2 and 255 seconds. This feature is convenient when it takes longer than 2 seconds to obtain a dial tone. 
+
+Register S7 : Remote Carrier Signal Wait Time 
+
+Register S7 decides how many seconds to wait for a remote modem's carrier signal before hanging up. The default value is 45 seconds. You can change it to a value between 1 and 255 seconds. Register S7 also controls the time-out of the W command. 
+
+Register S8 : Pause Time for Comma 
+
+Register S8 decides how many seconds to pause for each comma ( , ) encountered in a Dial command line. You usually use the comma when dialing through a PBX or other special telephone services to wait for an outside telephone line. The default value is 2 seconds, although you can change it to a value between 0 and 255 seconds. An alternative to changing this register is to include more than one comma in your command line. 
+
+Register S9 : Carrier Detect Response Time 
+
+Register S9 sets the time the remote modem's carrier signal must be present for the local modem to recognize it. This feature ensures that your modem does not mistake a busy signal, ring, or voice for the carrier signal. The value of this register is in tenths of a second. The default value is 600 ms , although you can change it from 1 to 255. For example, entering a value 13 means that the remote modem's carrier signal must be present for 1.3 seconds for the local modem to recognize it. Setting this value higher increases the chances the modem will not mistakenly identify the carrier signal. 
+
+Register S10 : Carrier Loss Time 
+
+Register S10 sets the time between the loss of a remote modem's carrier signal and when the local modem disconnects. This allows the remote modem's carrier signal to momentarily disappear from the telephone line. The value of this register is in tenths of a second. The default value is 1.4 seconds, although you can change it from 1 to 255. You may want to set this value higher if you have a noisy telephone line that might interfere with the remote modem's carrier signal. If you want your modem to ignore the Carrier Detect status and act as if the remote modem's carrier signal is always present, set the value to 255. 
+
+Register S11 : Touch Tone Dialing Duration 
+
+Register S11 controls the speed of the Touch Tone (DTMF) dialing. You can change the value from 50 to 255 ms. The default value will be 95 ms which sets a dialing rate of 5.26 digits per second. Increasing the value to 255 slows the dialing rate to 1.9 digits per second. 
+
+Note : Register S11 has no effect on pulse dialing, which is fixed at 10 pulses per second. 
+
+Register S12 : Escape Guard Time 
+
+Register S12 controls the escape guard time ( i.e. the time delay required after you enter the escape characters). The guard time prevents your modem from misinterpreting data as the escape sequence. This value is designated in measurements of 20 ms. The default value is 50 ( which is equivalent to one second), although you can change it to between 0 (0 seconds) to 255 (5.1 seconds). 
+
+Register S14 : Bit-mapped Register 
+
+Bit-mapped register S14 lets you control modem echo, responses, dialing method, and the originate or answer mode. 
+
+Bit Function 
+0 = x Undefined 
+
+1 = 0 Do not echo command (E0) 
+1 Echo command (E1) - default 
+
+2 = 0 Responses appear (Q0) - default 
+1 Responses do not appear (Q1) 
+
+3 = 0 Numeric responses (V0) 
+1 Verbose (Verbal) Responses (V1) - default 
+
+4 = x Undefined 
+
+5 = 0 Use touch-tone dialing method (T) - default 
+1 Use pulse dialing method (P) 
+
+6 = x Undefined 
+
+7 = 0 Answer incoming calls (A) 
+1 Originate calls (D) - default 
+
+Register S16 : Modem Tests 
+
+Bit-mapped register S16 displays the modem tests status. 
+
+Bit Function 
+0 = 0 Local analog loop back test off (&amp;T0) - default 
+1 Local analog loop back test on (&amp;T1) 
+
+1 = x Undefined 
+
+Register S18 : Duration of Modem Test 
+
+Register S18 sets the amount of time for the modem tests. The tests can run from 1 to 255 seconds, depending on the value in this register. This register has a default value of 0, which turns off the timer and tests will run until manually terminated. 
+
+Register S21 : Bit-mapped Register 
+
+Bit-mapped register S21 lets you control certain data communication control signals. 
+
+Bit Function 
+0,1 = x Undefined 
+
+2 = x Undefined 
+
+3,4= 0 Modem ignores the DTR signal (&amp;D0) 
+1 Modem enters command mode after ON-to-OFF DTR transition (&amp;D1) 
+2 Modem hangs up after ON-to-OFF DTR transition (&amp;D2) - default 
+3 Modem resets after ON-to-OFF DTR transition (&amp;D3) 
+
+5 = 0 CD signal always on (&amp;C0) 
+1 CD signal on when a remote carrier signal is present (&amp;C1) - default 
+6 = x Undefined 
+
+7 = 0 Long space disconnect turned off (Y0) - default. 
+1 Long space disconnect turned on (Y1) 
+
+Register S22 : Bit-mapped Register 
+
+Bit-mapped register S22 lets you control internal speaker and the modem responses. 
+
+Bit Function 
+0,1= 0 Speaker volume off (L0) 
+1 Low speaker volume (L1) 
+2 Medium speaker volume (L2) - default 
+3 Loud speaker volume (L3) 
+
+2,3= 0 Speaker off (M0) 
+1 Speaker on until carrier detected (M1) - default 
+2 Speaker always on (M2) 
+3 Speaker on until carrier detected but off during dialing (M3) 
+
+4,5,6=0 Hayes(tm) Smartmodem compatibility (X0) 
+4 Include CONNECT XXX responses (X1) 
+5 Same as 4 plus dial tone detection (X2) 
+6 Same as 4 plus BUSY response and blind dialing (X3) 
+7 Same as 6 plus dial tone detection (X4) - default 
+
+7 = 0 US make/break ratio (&amp;P0) - default 
+1 UK and Hong Kong make/break ratio (&amp;P1) 
+
+Register S23 : Bit-mapped Register 
+
+Bit Function 
+1,2,3= 0 Use 0-300bps DTE data rate 
+2 Use 1200bps DTE data rate 
+3 Use 2400bps DTE data rate 
+4 Use 4800bps DTE data rate 
+5 Use 9600bps DTE data rate 
+6 Use 19200bps DTE data rate 
+7 Use 38400bps or above DTE data rate 
+
+4,5= 0 Use even parity 
+1 Use none parity 
+2 Use odd parity 
+3 Use mark parity 
+
+6,7= 0 Turn off guard tone (&amp;G0) - default 
+1 Turn off guard tone (&amp;G1) 
+2 Use 1800 HZ guard tone (&amp;G2) 
+
+Register S25 : Data Terminal Ready Delay 
+
+When Modem is on-line, it will ignore a Data Terminal Ready signal lasting less than the value of this register. In this mode, the values for this register are 0 to 255 in hundredths of a second, and the default value is 0.05 seconds. If you will be entering synchronous mode after dialing asynchronously, this register determines how long the modem waits before looking for the Data Terminal Ready signal. This lets you detach the asynchronous terminal and connect a synchronous terminal while remaining in the Data Mode. In this mode, the values for this register are from 0 to 255 seconds and the default value is 5. 
+
+Register S26 : Request To Send-to-Clear To Send Delay 
+
+This register affects synchronous operation only and applies only when you are using the &amp;R0 command. This register determines how long the modem waits to turn on the Clear To Send signal after a Request To Send OFF-to-ON transition in 10 ms increment. The default value is 1, although this register accepts values from 0 to 255. 
+
+
+Register S30: Value of the voice inactivity timer 
+
+S30 = 0 Voice inactivity timer off (default) 
+
+S30 = 1 - 255 This is the period of time (in sec), which if expired causes the modem to hang up the telephone line if it is offhook and no data has passed during the period. When there is an inactivity time out with #CLS=8, the modem always forces #CLS=0 and #BDR=0. 
+
+Register S36 : V.42 negotiation fallback 
+
+Register S36 defines the type of connection attempted by the modem and the action to take if the attempt fails: 
+
+Bit Value Function 
+2,1,0 = 0 Modem hangs up 
+1 Same as 5 
+2 Reserved 
+3 Same as 7 
+4 Modem tries to connect using V.42 Alternative Protocol (compatible with MNP levels 2 - 5 ). If handshaking fails, modem hangs up. 
+
+5 Modem tries to connect using V.42 Alternative Protocol compatible with MNP levels 2 - 5 ). If handshaking fails, modem tries to connect using a standard asynchronous connection. 
+
+6 Reserved. 
+
+7 Modem tries to connect using V.42 Alternative Protocol (compatible with MNP levels 2 - 5 ). If handshaking fails, modem tries to connect using a standard asynchronous connection and automatic speed buffering -- default. 
+
+Register S46 : Protocol selection 
+
+Register S46 defines the protocol selections specified for future negotiation. 
+
+Value Function 
+136 LAP-M only 
+
+138 LAP-M with adaptive data compression - default 
+
+Register S82 : Break handling 
+
+Register S82 specifies the break signal method used during V.42 applications. The break type to be used depends on the user application. 
+
+Value Function 
+3 Expedited break signaling, regardless of its sequence in data sent and received by each modem. Data integrity maintained both ahead of and after the break. 
+
+7 Destructive break signaling, regardless of its sequence in data sent and received by each modem. Data not being processed by each modem at time of break is discarded. 
+
+128 In sequence break signaling as data is sent and received. Data integrity is maintained both ahead of and after the break. - default. 
+
+Register S95 : Negotiation message options 
+
+32 Disable V.42 extended response 
+
+32 Enable V.42 extended response 
+
+Register S97 : Energy detection threshold 
+This register can use in Call Progress Mode (CPM) mode, for dial tone detect threshold. The default value is 2. This register determine the detection threshold for Call Progress (CPM) tones. The default value is 2. 
+
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=bottom>
+      <CENTER><FONT face=helvetica color=#ffffff size=1>Copyright ©1999-2003 
+      ActiveXperts Software. All rights reserved.</FONT> 
+</CENTER></TD></TR></TBODY></TABLE></BODY></HTML>

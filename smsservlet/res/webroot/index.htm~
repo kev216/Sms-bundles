@@ -1,0 +1,28 @@
+<html>
+<head>
+
+<script language="JavaScript">
+
+function openOnTheFly(url,width,height) {
+  var myWin=open(url, "SMSSender", "width="+width
+  				+",height="+height
+				+",status=no,toolbar=no,menubar=no");
+}
+
+</script>
+
+</head>
+<body>
+
+<h1><center><font face="Verdana,Helvetica,Arial">SMS<br>Sender</font></center></h1>
+<font face="Verdana,Helvetica,Arial">
+<ul>
+<li><a href="smsform.htm">SMS form (with one background image)</a></li>
+<li><a href="javascript:openOnTheFly('smsform.htm',284,554);">SMS form (same but in a new window)</a></li>
+<li><a href="smsform_imgs.htm">SMS form (with several images)</a></li>
+<li><a href="smsform_noimg.htm">SMS form (without image)</a></li>
+</ul>
+</font>
+</body>
+</html>
+			

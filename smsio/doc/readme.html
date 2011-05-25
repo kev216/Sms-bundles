@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>Mail ConnectorFactory Service</title>
+</head>
+<body>
+
+<!-- Start of OSCAR Bundle Documentation -->
+<hr width="100%" size="2">
+<h1><i><a name="mailio"></a><font color="#0000aa">mailio.jar</font></i></h1>
+
+<p>
+<b>Description</b><br>
+This bundle provides a ConnectionFactory to send mails thru the IO Connector Service<br>
+This bundle embeds and uses two jar files: mail.jar (the Javax Mail Framework) and activation.jar (the Java Activation Framework)<br>
+For more details on how to use this bundle, refer to the /doc/readme.html file embedded in the bundle jarfile.<br>
+</p>
+
+<p>
+<b>Contributors</b><br>
+Didier Donsez (<a href="mailto:Didier.Donsez@ieee.org">Didier.Donsez@ieee.org</a>)<br>
+</p>
+
+<p>
+<b>License</b><br>
+LGPL<br>
+</p>
+
+<p>
+<b>Services</b><br>
+<code>org.osgi.service.io.ConnectionFactory</code>
+</p>
+
+<p>
+<b>Properties</b><br>
+io.scheme={ "mail", "mailto" }<br>
+</p>
+
+<p><b>Requirements</b><br>
+org.osgi.service.io; specification-version=1.0<br>
+javax.microedition.io
+</p>
+
+<!-- End of OSCAR Bundle Documentation -->
+
+<hr width="100%" size="2">
+
+<!-- Start of extra information  -->
+
+<p>
+<b>Download</b><br>
+<ul>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/mailio/mailio.jar'>Bundle binaries</a></li>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/mailio/mailio-src.jar'>Bundle sources</a></li>
+<li><a href='http://www-adele.imag.fr/users/Didier.Donsez/dev/osgi/mailio/readme.html'>The latest version of this documentation</a></li>
+</ul>
+</p>
+
+<p id="build">
+<b>Build</b><br>
+<ol>
+<li>configure the common.properties if necessary</li>
+<li>configure the project.properties if necessary</li>
+<li>configure the res/config.properties</li>
+<li>build with ant</li>
+</ol>
+</p>
+
+<p id="settings">
+<b>Settings</b><br>
+Configure the bundle properties (SMTP hostname, ...) in the /res/config.properties</li>
+</ol>
+</p>
+
+<p>
+<b>Usage</b><br>
+see chapter 13 in OSGi release 3<br>
+configure the properties (mail server, sender mail address) in the file  (/config.properties in the bundle, /res/config.properties in the source dir)
+use this code to test
+<pre>
+...
+		ServiceReference[] tempRefs = null;
+		tempRefs =
+			bundleContext.getServiceReferences(
+				ConnectorService.class.getName(),
+				null);
+
+		if (tempRefs == null) {
+			return;
+		}
+		ServiceReference sr = tempRefs[0];
+		ConnectorService connectorService =
+			(ConnectorService) bundleContext.getService(sr);
+
+			Connection connection =
+				connectorService.open(
+					"mail:somebody@somewhere.org?SUBJECT=test&X-Mailer=experimental",
+					ConnectorService.WRITE,
+					false);
+			if (connection instanceof OutputConnection) {
+				DataOutputStream os =
+					((OutputConnection) connection).openDataOutputStream();
+				os.writeUTF("This is just a test");
+			}
+
+			connection.close();
+...
+</pre>
+</p>
+
+<p>
+<b>Tested gateways</b><br>
+<ul>
+<li><a href="http://oscar.objectweb.org/">OSCAR</a></li>
+</ul>
+</p>
+
+
+<p>
+<b>TODO (contributions are welcome)</b><br>
+<ul>
+</ul>
+</p>
+
+</body>
+</html>

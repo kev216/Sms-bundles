@@ -1,0 +1,11 @@
+Bundle-Name: SMS Command
+Bundle-Description: provides a command to send SMS.
+Bundle-Vendor: Didier DONSEZ
+Bundle-Version: 0.1.0
+Bundle-DocURL: /docs/readme.html
+Bundle-Copyright: Library GNU Public License
+Bundle-ContactAddress: Didier DONSEZ (didier.donsez@ieee.org)
+Bundle-Activator: fr.imag.adele.bundle.sms.cmd.impl.Activator
+Import-Package: fr.imag.adele.bundle.sms, org.ungoverned.osgi.service.shell, org.ungoverned.gravity.servicebinder;specification-version=1.0
+Metadata-Location: /fr/imag/adele/bundle/sms/cmd/impl/metadata.xml
+

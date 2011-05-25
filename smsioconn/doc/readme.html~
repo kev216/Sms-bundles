@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>SMSSender</title>
+</head>
+<body>
+
+<!-- Start of OSCAR Bundle Documentation -->
+<hr width="100%" size="2">
+<h1><i><a name="smssender"></a><font color="#0000aa">smssender.jar</font></i></h1>
+
+<p>
+<b>Description</b><br>
+This bundle provides a service which send SMS (Short Message Service) with a GSM phone or with a HTTP->SMS remote proxy.<br>
+In fact, this bundle wrap smsj which is a free sms library (<a href="http://smsj.sourceforge.net">http://smsj.sourceforge.net</a>).<br>
+For more details on how to use this bundle, refer to the /doc/readme.html file embedded in the bundle jarfile.<br>
+</p>
+
+<p>
+<b>Contributors</b><br>
+Didier Donsez (<a href="mailto:Didier.Donsez@ieee.org">Didier.Donsez@ieee.org</a>)<br>
+</p>
+
+<p>
+<b>License</b><br>
+LGPL<br>
+</p>
+
+<p>
+<b>Services</b><br>
+<code>fr.imag.adele.bundle.sms.SMSSender</code>
+</p>
+
+<p>
+<b>Properties</b><br>
+None<br>
+</p>
+
+<p><b>Requirements</b><br>
+A recent distribution of the smsj available from <a href="http://smsj.sourceforge.net">http://smsj.sourceforge.net</a><br>
+A recent distribution of the javax.comm available from <a href="http://java.sun.com/products/javacomm/">http://java.sun.com/products/javacomm/</a><br>
+</p>
+
+<!-- End of OSCAR Bundle Documentation -->
+
+<hr width="100%" size="2">
+
+<!-- Start of extra information  -->
+
+<p>
+<b>Download</b><br>
+<ul>
+<li><a href='http://www-adele.imag.fr/~donsez/dev/osgi/smssender/smssender.jar'>Bundle binaries</a></li>
+<li><a href='http://www-adele.imag.fr/~donsez/dev/osgi/smssender/smssender-src.jar'>Bundle sources</a></li>
+<li><a href='http://www-adele.imag.fr/~donsez/dev/osgi/smssender/readme.html'>The latest version of this documentation</a></li>
+</ul>
+</p>
+
+<p>
+<b>Build</b><br>
+<ol>
+<li>install javax.comm (which can be put in $JAVA_HOME/jre/lib)</li>
+<li>download the latest smsj distribution http://smsj.sourceforge.net in the ./embeddedlibs</li>
+<li>configure the build properties in build.xml</li>
+<li>configure the serial port properties in ./res/config.properties</li>
+<li>then build with ant</li>
+</ol>
+</p>
+
+<p>
+<b>Usage</b><br>
+2 bundles (and more) use the fr.imag.adele.bundle.sms.SMSSender service registered by this bundle
+<ul>
+<li>smscmd.jar is a command for the OSCAR shell that send SMS
+<li>smsservlet.jar is a servlet which offer a simple form to send SMS (http://thegateway/sms/smsform_noimg.htm or http://thegateway/sms/smsform.htm)
+</ul>
+The activation of this bundle is blocking when no GSM phone is connected to the gateway<br>
+</p>
+
+<p>
+<b>Tested gateways</b><br>
+<ul>
+<li><a href="http://oscar.objectweb.org/">OSCAR</a></li>
+
+<li><a href="http://wwws.sun.com/software/embeddedserver/index.html">JES</a> (to do)</li>
+</ul>
+</p>
+
+<p>
+<b>Tested GSM Phones</b><br>
+<ul>
+<li>Ericsson R380s</li>
+</ul>
+</p>
+
+
+<p>
+<b>TODO (contributions are welcome)</b><br>
+<ul>
+<li>Exception instead of boolean return in send method</li>
+<li>Service to receive SMS</li>
+<li>Package as a Driver/Device for a Device Access Manager</li>
+<li>add javax.comm in Import-Package: manifest entry</li>
+<li>add RXTX (<a href="http://www.frii.com/~jarvi/rxtx/intro.html">http://www.frii.com/~jarvi/rxtx/intro.html</a>), a GNU javax.comm alternative (for Linux, ...). requires to add a GsmTransport using org.gnu.rxtx</li>
+</ul>
+</p>
+
+<p>
+<b>Links</b><br>
+<ul>
+<li><a href="http://smsj.sourceforge.net">Download the latest version of SMSJ</a></li>
+<li><a href="http://www.fastlogic.co.za/hayesat.htm">Information about Hayes AT command set </a></li>
+<li><a href="http://www.fastlogic.co.za/faq59.htm">Hayes AT command parameters for sending and receiving SMS messages</a></li>
+<li><a href="http://www.dreamfabric.com/sms">SMS messages and the PDU format</a></li>
+<li><a href="http://www.dreamfabric.com/sms/cms_error.html">CMS error codes</a></li>
+
+</ul>
+</p>
+
+</body>
+</html>
